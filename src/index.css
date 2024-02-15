@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.fontExo{
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 800;
+  }
+  
+  .fontMontserrat{
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .fontTheGirlNextDoor{
+    font-family: 'The Girl Next Door', cursive;
+  }
+  
+  .font-Montserrat{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 1100;
+  }
+  
+  .fontMontserratBold{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 2000;
+  }
+
+  .carousel-container {
+    overflow: hidden;
+  }
+
+
+  .depSection {
+    position: relative;
+    z-index: 1;
+}
+
+.depSection.pinned {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
