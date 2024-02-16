@@ -1,22 +1,43 @@
-
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState,useEffect } from 'react';
 import logo from "../assets/TR_logo.png";
 import { CgMenuRound, CgCloseO } from "react-icons/cg";
+// import { useLocation } from 'react-router-dom';
 
-function Header() {
+function Header({scrollToServices1}) {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
-  const serviecesRef = useRef(null)
+  useEffect(() => {
+    const smoothScroll = () => {
+      const target = document.getElementById('services');
+      if (target) {
+        window.scrollTo({
+          top: target.offsetTop,
+          behavior: 'smooth'
+        });
+      }
+    };
+
+    const servicesLink = document.querySelector('a[href="#services"]');
+    if (servicesLink) {
+      servicesLink.addEventListener('click', smoothScroll);
+    }
+
+    return () => {
+      if (servicesLink) {
+        servicesLink.removeEventListener('click', smoothScroll);
+      }
+    };
+  }, []);
 
   return (
 
-    <nav className="bg-white-A700 py-2 sm:py-4 border-b-2 shadow-bs">
+    <nav className="bg-white-A700 py-2 sm:py-4 border-b-2 shadow-bs ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-16 ">
           <a href='/' className="flex-shrink-0">
             <img src={logo} alt="Logo" className="w-40 sm:w-56 h-auto " />
           </a>
@@ -33,9 +54,11 @@ function Header() {
           </div>
           <div className="hidden lg:block">
             <div className="ml-10 flex items-baseline space-x-4">
-              <a href="/about_us" className="text-gray-900 hover:bg-deep_purple-800 hover:text-white-A700 px-4 py-2 rounded-full uppercase font-medium font-montserrat text-xl tracking-[-0.60px]">ABOUT US</a>
-              <a href="#" className="text-gray-900 hover:bg-deep_purple-800 hover:text-white-A700 px-4 py-2 rounded-full uppercase font-medium font-montserrat text-xl tracking-[-0.60px]">SERVICES</a>
-              <a href="/projects" className="text-gray-900 hover:bg-deep_purple-800 hover:text-white-A700 px-4 py-2 rounded-full uppercase font-medium font-montserrat text-xl tracking-[-0.60px]">PROJECTS</a>
+              <a href="/about_us" className="text-gray-900 hover:text-deep_purple-800 px-4 py-2 rounded-full uppercase font-medium font-montserrat text-xl tracking-[-0.60px]">ABOUT US</a>
+              {/* {isHomePage && (  */}
+              <a href='#services' className="text-gray-900 hover:text-deep_purple-800  px-4 py-2 rounded-full uppercase font-medium font-montserrat text-xl tracking-[-0.60px]">SERVICES</a>
+              {/* )} */}
+              <a href="/projects" className="text-gray-900 hover:text-deep_purple-800  px-4 py-2 rounded-full uppercase font-medium font-montserrat text-xl tracking-[-0.60px]">PROJECTS</a>
 
             </div>
           </div>
@@ -43,7 +66,10 @@ function Header() {
           <div className="hidden lg:block">
             <div className="ml-10 flex items-baseline space-x-4">
               <div className="hidden md:block justify-end w-full">
-                <a href='/contact_us' className="py-2 px-5 bg-deep_purple-800 text-white-A700  hover:bg-white-A700 border-2 border-deep_purple-800 hover:text-deep_purple-800  cursor-pointer font-bold rounded-[23px] text-center  text-lg tracking-[0.60px]">
+                {/* <a href='/contact_us' className="py-2 px-5 bg-deep_purple-800 text-white-A700  hover:bg-white-A700 border-2 border-deep_purple-800 hover:text-deep_purple-800  cursor-pointer font-bold rounded-[23px] text-center  text-lg tracking-[0.60px]">
+                  CONTACT US
+                </a> */}
+                <a href='/contact_us' target='_blank' className="py-2 px-5 bg-deep_purple-800 text-white-A700  hover:bg-white-A700 border-2 border-deep_purple-800 hover:text-deep_purple-800  cursor-pointer font-medium font-montserrat rounded-[23px] text-center text-xl tracking-[0.60px]">
                   CONTACT US
                 </a>
               </div>
@@ -55,12 +81,11 @@ function Header() {
         <div className="lg:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 ml-[70%]">
             <a href="/about_us" className="text-gray-900  hover:deep_purple-800 block px-3 py-1 rounded-md uppercase font-medium font-montserrat  text-xs  tracking-[-0.60px]">About Us</a>
-            <a href="#" className="text-gray-900  hover:deep_purple-800 block px-3 py-1 rounded-md uppercase font-medium font-montserrat  text-xs  tracking-[-0.60px]">SERVICES</a>
+            <a href="#services" className="text-gray-900  hover:deep_purple-800 block px-3 py-1 rounded-md uppercase font-medium font-montserrat  text-xs  tracking-[-0.60px]">SERVICES</a>
             <a href="/projects" className="text-gray-900  hover:deep_purple-800 block px-3 py-1 rounded-md uppercase font-medium font-montserrat  text-xs tracking-[-0.60px]">PROJECTS</a>
             <a href='/contact_us' className="px-2 py-1 bg-deep_purple-800 hover:bg-blue-700 text-white-A700 cursor-pointer font-medium  rounded-full text-center text-[9px] tracking-[0.60px]">
               CONTACT US
             </a>
-
           </div>
         </div>
       )}

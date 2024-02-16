@@ -55,7 +55,7 @@ const HomeSection3 = () => {
     ];
     return (
         <>
-            <div className="flex flex-col md:gap-10 gap-[120px] items-center justify-start w-auto md:w-full px-5 sm:px-24 relative">
+            <div className="flex flex-col md:gap-10 gap-[120px] items-center justify-start max-w-[1300px] mx-auto px-5 sm:px-24 relative">
                 <div className="flex flex-col md:gap-10 gap-16 items-center justify-start  mx-auto md:px-5 w-full">
                     <div className="flex flex-col h-auto md:h-auto items-center justify-start  w-full">
                         <div className="flex flex-col md:gap-10 gap-16 items-start justify-start w-auto md:w-full">
@@ -68,7 +68,7 @@ const HomeSection3 = () => {
                                         Happy clients
                                     </div>
                                     <p
-                                        className="mt-3 sm:mt-1 text-lg md:text-[24px] text-left text-gray-900 sm:text-xl tracking-[-0.72px] w-auto font-montserrat font-normal"
+                                        className="mt-3 text-lg md:text-[24px] text-left text-gray-900 sm:text-xl tracking-[-0.72px] w-auto font-montserrat font-normal"
                                     >
                                         Hear from the decision makers themselves!
                                     </p>

@@ -5,16 +5,19 @@ import LetsTalk from '../buttons/LetsTalk';
 function BuiltFor() {
     return (
         // <div className="relative flex items-center justify-center">
-       <div className="relative flex md:h-[660px]"> 
-            <div
-                className="absolute inset-0 bg-cover bg-center opacity-25 w-full md:h-auto"
-                style={{
-                    backgroundImage: "url('images/background.png')"
-                }}
-            ></div>
-
-            <div className="relative z-10 text-left py-[50px] pl-[32px] md:pl-[64px] md:pt-[80px]">
-                <div className="font-Montserrat text-sm text-gray-900 md:text-2xl font-normal leading-[33.6px] tracking-[5%] pb-3">
+        <>
+        <div
+        className="inset-0 bg-cover bg-center opacity-25"
+        style={{
+            backgroundImage: "url('images/background.png')"
+        }}
+    ></div>
+       <div className="flex md:h-[660px] max-w-[1300px] mx-auto "> 
+    
+     
+            <div className="relative z-10 text-left py-[50px] px-4 sm:px-6 lg:px-8 md:pt-[80px]">
+            <div className='max-w-[1300px]'>
+                <div className="font-Montserrat text-left text-sm text-gray-900 md:text-2xl font-normal leading-[33.6px] tracking-[5%] pb-3">
                     We are Techrenders 🔥❤️
                 </div>
 
@@ -35,7 +38,9 @@ function BuiltFor() {
                     className="absolute w-96 h-112 right-3 md:top-[220px] md:pb-20 hidden lg:block"
                 />
             </div>
+            </div>
         </div>
+        </>
         // </div>
     );
 }

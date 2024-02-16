@@ -6,7 +6,8 @@ function ReadyToCollabrate({text1}) {
     return (
 
         // <div className="relative bg-gray-900 p-10 md:px-40 py-28 md:py-60">
-        <div className='relative bg-gray-900 m-8 md:m-[64px] rounded-[12px] p-10 md:p-[160px]'>
+        <div className='max-w-[1300px] mx-auto px-4 sm:px-6 lg:px-8 pb-8 sm:pb-12'>
+        <div className='relative bg-gray-900 rounded-[12px] p-10 md:p-40'>
         <div
             className="absolute inset-0 bg-cover bg-center z-0 rounded-xl"
             style={{
@@ -28,7 +29,9 @@ function ReadyToCollabrate({text1}) {
             <LetsTalk/>
             </div>
         </div>
+    </div> 
     </div>
+
 
     )
 }

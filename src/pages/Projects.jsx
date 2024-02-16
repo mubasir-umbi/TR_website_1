@@ -4,12 +4,15 @@ import CardList from "../components/RecentProject/CardList;";
 import ProjectCarousel from "../components/HeroSection/ProjectCarousel";
 import Explore from "../components/HeroSection/Explore";
 import ReadyToCollabrate from "../components/AboutUs/ReadyToCollabrate";
+import BackToTop from "../components/BackToTop";
+
 
 const Projects = () => {
   return (
     <>
+    <BackToTop/>
       {" "}
-      <div className="w-[96%] mx-auto">
+      {/* <div className="w-[96%] mx-auto"> */}
         <Explore
           backgroundColor=""
           titleColor=""
@@ -17,13 +20,13 @@ const Projects = () => {
           title="Case Studies"
           description="Explore how our innovative solutions have addressed unique challenges for our clients."
         />
-      </div>
+      {/* </div> */}
       <ProjectCarousel bg_Color="white-A700" />
-      <div className="w-[96%] mx-auto">
+      {/* <div className="w-[96%] mx-auto"> */}
         <CardList />
         <ReadyToCollabrate />
 
-      </div>
+      {/* </div> */}
     </>
   );
 };

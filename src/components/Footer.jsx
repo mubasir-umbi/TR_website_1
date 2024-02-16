@@ -4,36 +4,42 @@ import { BsArrowRightCircleFill } from "react-icons/bs";
 
 const FooterNew = () => {
   return (
-    <footer className="w-full py-5 sm:py-10 bg-white-A700">
+    <footer className="max-w-[1300px] mx-auto py-5 sm:py-10 bg-white-A700">
       <h2 className="sr-only">Footer</h2>
-      <div className="flex flex-col-reverse sm:flex-row md:justify-between lg:justify-around md:mt-10">
 
-        {/* :SITE NAME & SOCIAL NETWORKS */}
-        {/* <div className="relative mt-14 sm:mt-0 px-5 flex flex-col justify-center items-center text-gray-900"> */}
-        <div className="relative mt-14 sm:mt-0 px-5 flex flex-col justify-center md:justify-start text-gray-900">
-          {/* ::Site name */}
-          <div className="mt-9 flex flex-col justify-center md:justify-start  items-center">
+      {/* <div className="flex flex-col-reverse sm:flex-row md:justify-between lg:justify-around md:mt-10"> */}
+      <div className="flex flex-col-reverse sm:flex-row md:justify-between px-4 sm:px-6 lg:px-8 md:mt-8">
+        {/* <div className="relative mt-14 sm:mt-0 flex flex-col justify-center md:float-left text-gray-900">
+          <div className="mt-9 flex flex-col justify-center md:float-left items-center">
             <a href="/"><img 
-              className="w-[300px] h-[26px] "
+              className="w-[300px] h-[26px] text-left "
               src={logo}
               alt="tr_logo"
-            /></a> 
+            /></a>  */}
+            <div className="relative mt-14 sm:mt-0 flex flex-col justify-center md:float-left text-gray-900">
+  <div className="mt-9 flex flex-col justify-center items-center md:items-start">
+    <a href="/">
+      <img 
+        className="w-[300px] h-[26px]"
+        src={logo}
+        alt="tr_logo"
+      />
+    </a>
 
             <p className='sm:w-80 pt-6 text-sm md:text-lg font-montserrat font-normal md:leading-8 text-gray-900 text-center sm:text-left  tracking-wide'>
               Stand out your business through leading digital technologies and Designs.
             </p>
 
-            <a href="/contact_us" className="md:ml-[-110px] relative overflow-hidden mt-3 bg-white-A700  border-2 text-deep_purple-800  inline-flex items-center font-montserrat cursor-pointer text-sm px-4 py-2 md:px-6 md:py-3 font-semibold md:font-bold  md:text-lg leading-normal leading-trim uppercase tracking-wide rounded-full hover:bg-deep_purple-800 hover:text-white-A700">
+            <a href="/contact_us" className=" mt-3 bg-white-A700  border-2 text-deep_purple-800  inline-flex items-center font-montserrat cursor-pointer text-sm px-4 py-2 md:px-6 md:py-3 font-semibold md:font-bold  md:text-lg leading-normal leading-trim uppercase tracking-wide rounded-full hover:bg-deep_purple-800 hover:text-white-A700">
               <span>CONTACT US</span>
               <BsArrowRightCircleFill className="ml-2 text-xl md:text-2xl"/>
             </a>
-
           </div>
-          {/* ::Social & copyright */}
+
+
           <div className="mt-auto flex flex-col items-center">
-            {/* :::Social */}
+  
             <span className="sm:hidden inline-flex mt-6 w-full justify-center md:justify-start md:w-auto">
-              {/* Instagram */}
               <a href="#link" className="ml-3 text-gray-900">
                 <span className="sr-only">Instagram</span>
                 <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-6 h-6" viewBox="0 0 24 24">
@@ -50,15 +56,12 @@ const FooterNew = () => {
                 </svg>
               </a>
             </span>
-
           </div>
+
           {/* ::Mobile separator line */}
           <span className="sm:hidden absolute -top-4 left-1/2 w-1/4 h-px bg-gray-400 transform -translate-x-1/2" aria-hidden="true" />
         </div>
 
-
-
-        {/* :NAVIGATION */}
         <div className="grid grid-cols-2 gap-5 text-gray-900">
           <div className="hidden md:block col-span-2 md:col-span-1 pb-0 md:py-3 px-4 text-left sm:items-start">
             <h3 className="py-1.5 md:py-4 text-center sm:text-left text-xl text-gray-900 font-bold tracking-wide">Folow Us</h3>
@@ -86,12 +89,12 @@ const FooterNew = () => {
 
           <div className="col-span-2 md:col-span-1 pb-0 md:py-3 px-4 flex flex-col text-left sm:items-start">
             <h3 className="py-1.5 md:py-4 text-center sm:text-left text-xl text-gray-900 font-bold tracking-wide">Services</h3>
-            <nav className="flex justify-around flex-col items-center md:items-start font-medium font-montserrat sm:leading-8 list-none">
-              <li><a href="#link" className="hover:text-gray-700 tracking-[0.03em]">Web Development</a></li>
-              <li><a href="#link" className="hover:text-gray-700 tracking-[0.03em]">App Development</a></li>
-              <li><a href="#link" className="hover:text-gray-700 tracking-[0.03em]">Visual Designing</a></li>
-              <li><a href="#link" className="hover:text-gray-700 tracking-[0.03em]">Project Management</a></li>
-              <li><a href="#link" className="hover:text-gray-700 tracking-[0.03em]">Maintenance</a></li>
+            <nav className="flex justify-around flex-col items-center md:items-start font-normal sm:font-medium font-montserrat sm:leading-8 list-none">
+              <li className="hover:text-gray-700 tracking-[0.03em]">Web Development</li>
+              <li className="hover:text-gray-700 tracking-[0.03em]">App Development</li>
+              <li className="hover:text-gray-700 tracking-[0.03em]">Visual Designing</li>
+              <li className="hover:text-gray-700 tracking-[0.03em]">Project Management</li>
+              <li className="hover:text-gray-700 tracking-[0.03em]">Maintenance</li>
             </nav>
           </div>
 

@@ -1,11 +1,10 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Explore from '../HeroSection/Explore';
 
 const Card = ({ logoSrc, ImageSrc, description }) => {
+ 
     return (
         <>
-
-
             <div className="flex flex-col lg:flex-row lg:justify-center lg:items-center mx-[26px] sm:mx-[93px] my-5">
                 {/* Right side image */}
                 <div className="m-2 md:order-last">
@@ -23,13 +22,21 @@ const Card = ({ logoSrc, ImageSrc, description }) => {
                 </div>
             </div>
 
-
-
         </>
     );
 };
 
 const CardList = () => {
+    const [isImageLoaded, setIsImageLoaded] = useState(false);
+    useEffect(() => {
+      // Simulate image loading delay
+      const timeout = setTimeout(() => {
+        setIsImageLoaded(true);
+      }, 1000);
+  
+      return () => clearTimeout(timeout);
+    }, []);
+
     const cardData = [
         {
             logoSrc: "/images/NexcrmLogo.png",
@@ -65,7 +72,9 @@ const CardList = () => {
     ];
 
     return (
-        <div>
+        <div className={`w-full transition-opacity duration-1000 ease-in-out ${
+            isImageLoaded ? 'opacity-100' : 'opacity-0'
+          }`}>
             <Explore
                 backgroundColor=""
                 titleColor=""
@@ -73,8 +82,6 @@ const CardList = () => {
                 title="Recent Projects"
                 description="Here are a couple of previous project we worked on."
             />
-
-
 
             {cardData.slice(0, 6).map((card, index) => (
                 <React.Fragment key={index}>

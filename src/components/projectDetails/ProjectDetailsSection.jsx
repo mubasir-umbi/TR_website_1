@@ -1,25 +1,27 @@
-import React from 'react'
-
-
+import React, { useEffect, useState } from 'react'
 
 const ProjectDetailsSection = ({ head1, head2, img, align, color, text }) => {
     return (
         <>
-            <div className="flex flex-col gap-[54px] items-start justify-start mt-32 w-[90%] mx-auto">
-                {/* item-start / center */}
+          <div className='max-w-[1300px] mx-auto px-4 sm:px-6 lg:px-8'>
+            <div className="flex flex-col gap-[54px] items-start justify-start mt-4">
+            <div className={`${align} flex flex-col md:gap-10 gap-[137px]  w-auto md:w-full`}>
+                    <div className= {`${align}  flex flex-col md:gap-10 gap-16 w-auto md:w-full`}>
+                        <div className="flex flex-col gap-6 w-auto sm:w-full">
+
+            {/* <div className="flex flex-col gap-[54px] items-start justify-start md:w-full mt-28 md:mt-14 w-full">
                 <div className={` ${align} flex flex-col md:gap-10 gap-[137px] justify-start w-auto md:w-full`}>
-                    {/* item-start / end */}
                     <div className= {`${align}  flex flex-col md:gap-10 gap-16 justify-start w-auto md:w-full`}>
-                        <div className="flex flex-col gap-6 items-start justify-start w-auto sm:w-full">
+                        <div className="flex flex-col gap-6 items-start justify-start w-auto sm:w-full"> */}
                             <p
                                 className={`${color} sm:leading-[120.00%] sm:text-6xl text-4xl tracking-[-0.64px] font-exo font-extrabold text-start`}>
-                                <span className={`${color} font-exo text-left font-extrabold`}>
+                                <span className={`${color} font-exo font-extrabold`}>
                                     <>
                                         {head1}
                                         <br />
                                     </>
                                 </span>
-                                <span className="text-blue_gray-900 font-exo text-left font-extrabold">
+                                <span className="text-blue_gray-900 font-exo font-extrabold">
                                     {head2}
                                 </span>
                             </p>
@@ -29,14 +31,15 @@ const ProjectDetailsSection = ({ head1, head2, img, align, color, text }) => {
                                 {text}
                             </p>
                         </div>
-                        
+
                         <img
-                            className="h-auto sm:h-auto object-cover md:w-full"
+                            className="h-auto sm:h-auto mb-10 object-cover md:w-full"            
                             src={img}
                             alt="image"
                         />
                     </div>
                 </div>
+            </div>
             </div>
         </>
     )

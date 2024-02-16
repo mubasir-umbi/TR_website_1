@@ -2,7 +2,8 @@ import React from 'react'
 
 function OurTechnology() {
     return (
-        <div className="w-full sm:w-950 sm:h-399  py-4  sm:py-14">
+        <div className='bg-gray-900 '>
+        <div className="max-w-[1300px] mx-auto  py-4 sm:py-14">
             <img
                 src="/images/technologyStacks.png"
                 alt="Placeholder"
@@ -15,6 +16,7 @@ function OurTechnology() {
             />
             
         </div>
+</div>
     )
 }
 

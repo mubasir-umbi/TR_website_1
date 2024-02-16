@@ -8,8 +8,6 @@ import ProjectDetailsSection from "../../components/projectDetails/ProjectDetail
 import KeyFeturesSection from "../../components/projectDetails/KeyFeturesSection";
 
 import HaveProjForUs from '../../components/projectDetails/HaveProjForUs';
-
-
 import img_group230198 from '../../assets/images/img_group230198.svg'
 import offroll_img_1 from '../../assets/images/offroll_img_1.png'
 import offroll_img_2 from '../../assets/images/offroll_img_2.png'
@@ -18,6 +16,7 @@ import offroll_img_4 from '../../assets/images/offroll_img_4.png'
 import offroll_key_f_img from '../../assets/images/offroll_key_f_img.png'
 import img_group2301911 from '../../assets/images/img_group2301911.png'
 import Group_230192 from '../../assets/images/Group 230192.png'
+import BackToTop from "../../components/BackToTop";
 
 
 
@@ -75,10 +74,14 @@ const datas = [
 const Offroll = () => {
   return (
     <>
-      <div className="bg-white-A700 flex flex-col font-montserrat items-center justify-end mx-auto pt-12 w-full">
+      {/* <div className="bg-white-A700 flex flex-col font-montserrat items-center justify-end mx-auto pt-12 w-full">
         <div className="flex flex-col md:gap-10 gap-16 items-center justify-start w-full">
-          <div className="flex flex-col items-start justify-start mx-1 md:px-5 w-full">
-
+          <div className="flex flex-col items-start justify-start mx-1 md:px-5 w-full"> */}
+           <div className='max-w-[1300px] mx-auto'>
+      <div className="bg-white-A700 flex flex-col font-montserrat items-center justify-end mx-auto pt-12">
+        <div className="flex flex-col md:gap-10 gap-16 items-center justify-start w-full">
+          <div className="flex flex-col w-full">
+          <BackToTop/>
             <SectionOne 
                  name = {img_group230198} 
                  text = {text} 
@@ -125,7 +128,7 @@ const Offroll = () => {
           </div>
         </div>
       </div>
-
+      </div>
       <HaveProjForUs/>
 
     </>

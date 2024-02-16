@@ -1,4 +1,5 @@
 import React, { lazy, Suspense } from 'react';
+import BackToTop from '../components/BackToTop';
 const BuiltFor = lazy(() => import('../components/AboutUs/BuilFor'));
 const WhatWeDo = lazy(() => import('../components/AboutUs/WhatWeDo'));
 const SuccessFull = lazy(() => import('../components/AboutUs/SuccessFull'));
@@ -12,7 +13,9 @@ const DontLet = lazy(() => import('../components/DontLet'));
 
 function AboutUs() {
   return (
+    
     <Suspense >
+      <BackToTop/>
       <BuiltFor />
       <WhatWeDo />
       <SuccessFull />

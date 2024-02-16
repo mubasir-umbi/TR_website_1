@@ -40,20 +40,22 @@ import React, { Suspense } from 'react';
     
         return (
             <>
-                <p className="fontMontserratBold text-deep_purple-800 text-4xl sm:text-5xl lg:text-6xl font-black leading-77 tracking-7 text-left pl-9 sm:pl-[64px]">
+            <div className='max-w-[1300px] mx-auto px-4 sm:px-6 lg:px-8'>
+                <p className="fontMontserratBold text-deep_purple-800 text-4xl sm:text-5xl lg:text-6xl font-black leading-77 tracking-7 text-left">
                     How <br/> <span className='text-gray-900'> do we make it? </span>
                 </p>
     
-                <div className="flex flex-wrap justify-center m-8 sm:m-16">
+                <div className="flex flex-wrap justify-center my-8 sm:my-16">
                     {images.map((image) => (
                         // <div key={image.id} className="w-full sm:w-1/2 md:w-1/3 lg:w-1/3 p-2">
                         <div key={image.id} className="w-1/2 md:w-1/3 lg:w-1/3 p-2">
-                            <Suspense fallback={<div>Loading...</div>}>
+                            <Suspense > 
                                 <ImageComponent src={image.src} alt={image.alt} />
                             </Suspense>
                         </div>
                     ))}
                 </div>
+                </div> 
             </>
         );
     }

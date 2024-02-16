@@ -1,23 +1,17 @@
 import React from 'react'
-
 import LetsChatSection from "../../components/LetsChatSection";
 import SectionOne from "../../components/projectDetails/SectionOne";
 import SectionTwo from "../../components/projectDetails/SectionTwo";
 import ProjectDetailsSection from "../../components/projectDetails/ProjectDetailsSection";
 import KeyFeturesSection from "../../components/projectDetails/KeyFeturesSection";
-
 import img_group230198 from '../../assets/images/img_group230198.svg'
 import handMockup from '../../assets/images/img_mockup2withhand.png'
 import snaptrack_heading_img from '../../assets/images/snaptrack_heading_img.svg'
 import img_group2301911 from '../../assets/images/img_group2301911.png'
 import Group_230192 from '../../assets/images/Group 230192.png'
 import snaptrac_img_1 from '../../assets/images/snaptrac_img_1.png'
-
 import HaveProjForUs from '../../components/projectDetails/HaveProjForUs';
-
-
-
-
+import BackToTop from '../../components/BackToTop';
 
 const txt = `A Software as a Service (SAAS) attendance and payroll
 solution, functioning akin to a digital HR assistant,
@@ -35,7 +29,6 @@ security features, including facial recognition and
 biometric device integration.`
 
 const color = 'text-indigo-400'
-
 
 const datas = [
   {
@@ -65,15 +58,14 @@ const datas = [
 ]
 
 
-
-
 const SnapTrack = () => {
   return (
     <>
-      <div className="bg-white-A700 flex flex-col font-montserrat items-center justify-end mx-auto pt-12 w-[95%]">
+      <div className='max-w-[1300px] mx-auto'>
+      <div className="bg-white-A700 flex flex-col font-montserrat items-center justify-end mx-auto pt-12">
         <div className="flex flex-col md:gap-10 gap-16 items-center justify-start w-full">
-          <div className="flex flex-col items-start justify-start  mx-auto md:px-5 w-full">
-
+          <div className="flex flex-col w-full">
+          <BackToTop/>
             <SectionOne 
                  h = 'h-16'
                  name = {snaptrack_heading_img} 
@@ -91,9 +83,8 @@ const SnapTrack = () => {
                  img = {snaptrac_img_1}
                  align = 'items-start'
                  color = {color}
-                 text = {ProjDetText0}
+                 text = {ProjDetText0}    
             />
-
             <ProjectDetailsSection
                  head1 = 'A new experience'
                  head2 = 'That people love' 
@@ -110,6 +101,7 @@ const SnapTrack = () => {
             
           </div>
         </div>
+      </div>
       </div>
       <HaveProjForUs/>
 
