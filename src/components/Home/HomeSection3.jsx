@@ -14,30 +14,8 @@ import logo_1_ofroll from '../../assets/images/logo_1_ofroll.png'
 import arrowL from '../../assets/images/arro_left.svg'
 import dhanush_img from '../../assets/images/dhanush_img.png'
 import img_image112 from '../../assets/images/img_image112.png'
+import datamappersLogo from '../../assets/images/datmapper.jpg'
 
-
-const usersResponse = [
-    {
-        comment: `Entering our third year with MT5, 
-                  their swift claim handling and tailored service have greatly
-                   boosted our employee relations and streamlined HR operations, 
-                   becoming essential in our employee care approach. Big thanks to the team!`,
-        name: "Dhanush K K",
-        desg: "CEO, MT6",
-        image: dhanush_img,
-        show: true
-    },
-    {
-        comment: `Entering our third year with MT5, 
-                  their swift claim handling and tailored service have greatly
-                   boosted our employee relations and streamlined HR operations, 
-                   becoming essential in our employee care approach. Big thanks to the team!`,
-        name: "Dhanush K K",
-        desg: "CEO, MT6",
-        image: dhanush_img,
-        show: false
-    },
-];
 
 const HomeSection3 = () => {
 
@@ -49,7 +27,7 @@ const HomeSection3 = () => {
         { src: logo_1_la, alt: 'image1605' },
         { src: logo_1_akessia, alt: 'image1604' },
         { src: logo_1_bizbuz, alt: 'logoOne' },
-        { src: logo_1_dm, alt: 'logo8' },
+        { src: datamappersLogo, alt: 'logo8' },
         { src: logo_1_smarttech, alt: 'logo9' },
         { src: logo_1_gc, alt: 'logo10' }
     ];
@@ -77,7 +55,7 @@ const HomeSection3 = () => {
                                 <div className="flex flex-col gap-8 items-start w-auto vertical">
                                     <div className="gap-8 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 items-start justify-start my-0 w-full">
                                         {logos.map((logo, index) => (
-                                            <div key={index} className="h-20 sm:h-24 lg:h-32 bg-white-A700 border border-blue_gray-100 border-solid flex flex-col items-center justify-center p-4 sm:p-6 rounded-lg shadow-bs">
+                                            <div key={index} className="h-20 sm:h-24 lg:h-32 bg-white-A700 border border-blue_gray-100 border-solid flex flex-col items-center justify-center p-4 sm:p-6 rounded-lg shadow-bs hover:scale-110 transition duration-500 hover:shadow-lg ">
                                                 <img className="h-auto max-h-full w-auto max-w-full logo-image" src={logo.src} alt={logo.alt} />
                                             </div>
                                         ))}

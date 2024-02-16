@@ -17,7 +17,6 @@ const btBg2 = 'bg-gray-800_03 text-white-A700'
 const HomeSection2 = () => {
 
     const serviecesRef = useRef(null)
-    const servicesRef = useRef(null)
     return (
         <>
             <div className="bg-black-900_02 ">
@@ -37,7 +36,7 @@ const HomeSection2 = () => {
                             </div>
 
 
-                            <div className="relative" id="services" ref={servicesRef}>
+                            <div className="relative" id="services">
                                 <div className="sticky top-0 transition-all duration-500 ease-in-out">
                                     <DepSectionCard
                                         head1="Web"

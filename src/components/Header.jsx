@@ -1,9 +1,10 @@
 import React, { useRef, useState,useEffect } from 'react';
 import logo from "../assets/TR_logo.png";
 import { CgMenuRound, CgCloseO } from "react-icons/cg";
+import { Link } from 'react-router-dom';
 // import { useLocation } from 'react-router-dom';
 
-function Header({scrollToServices1}) {
+function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -45,9 +46,9 @@ function Header({scrollToServices1}) {
             <button onClick={toggleMenu} className="text-white hover:text-gray-300 focus:outline-none focus:text-gray-300">
               {isOpen ? (
 
-                <CgCloseO className='w-8 h-8 text-gray-400' />
+                <CgCloseO className='w-8 h-8 text-blue-500' />
               ) : (
-                <CgMenuRound className='w-8 h-8 text-gray-400' />
+                <CgMenuRound className='w-8 h-8 text-blue-500' />
               )}
 
             </button>
@@ -55,13 +56,12 @@ function Header({scrollToServices1}) {
           <div className="hidden lg:block">
             <div className="ml-10 flex items-baseline space-x-4">
               <a href="/about_us" className="text-gray-900 hover:text-deep_purple-800 px-4 py-2 rounded-full uppercase font-medium font-montserrat text-xl tracking-[-0.60px]">ABOUT US</a>
-              {/* {isHomePage && (  */}
               <a href='#services' className="text-gray-900 hover:text-deep_purple-800  px-4 py-2 rounded-full uppercase font-medium font-montserrat text-xl tracking-[-0.60px]">SERVICES</a>
-              {/* )} */}
               <a href="/projects" className="text-gray-900 hover:text-deep_purple-800  px-4 py-2 rounded-full uppercase font-medium font-montserrat text-xl tracking-[-0.60px]">PROJECTS</a>
-
             </div>
           </div>
+
+         
 
           <div className="hidden lg:block">
             <div className="ml-10 flex items-baseline space-x-4">

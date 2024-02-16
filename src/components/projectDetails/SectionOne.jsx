@@ -13,7 +13,7 @@ const SectionOne = ({ name, text, image, h = 'h-9' }) => {
                         {text}
                     </p>
                 </div>
-                <div className="mt-8 sm:mt-0 mx-2 sm:w-1/2">
+                <div className="mt-8 sm:mt-0 mx-2 sm:w-1/2 sm:hover:scale-95 transition duration-500">
                     <img className="h-[330px] md:h-auto object-cover" src={image} alt="image" />
                 </div>
             </div>

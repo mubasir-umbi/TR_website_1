@@ -1,7 +1,7 @@
 import React, { Suspense } from 'react';
 
     const ImageComponent = ({ src, alt }) => {
-        return <img src={src} alt={alt} className="w-full h-auto" />;
+        return <img src={src} alt={alt} className="w-full h-auto hover:scale-95 transition duration-500" />;
     };
     
     function HowDoWe() {

@@ -7,7 +7,7 @@ const Card = ({ logoSrc, ImageSrc, description }) => {
         <>
             <div className="flex flex-col lg:flex-row lg:justify-center lg:items-center mx-[26px] sm:mx-[93px] my-5">
                 {/* Right side image */}
-                <div className="m-2 md:order-last">
+                <div className="m-2 md:order-last hover:scale-95 transition duration-500">
                     <img src={ImageSrc} alt="placeholder" className="w-72 h-72 md:w-[300px] md:h-[300px] object-cover" />
                 </div>
 
@@ -27,15 +27,7 @@ const Card = ({ logoSrc, ImageSrc, description }) => {
 };
 
 const CardList = () => {
-    const [isImageLoaded, setIsImageLoaded] = useState(false);
-    useEffect(() => {
-      // Simulate image loading delay
-      const timeout = setTimeout(() => {
-        setIsImageLoaded(true);
-      }, 1000);
   
-      return () => clearTimeout(timeout);
-    }, []);
 
     const cardData = [
         {
@@ -72,9 +64,10 @@ const CardList = () => {
     ];
 
     return (
-        <div className={`w-full transition-opacity duration-1000 ease-in-out ${
-            isImageLoaded ? 'opacity-100' : 'opacity-0'
-          }`}>
+        // <div className={`w-full transition-opacity duration-1000 ease-in-out ${
+        //     isImageLoaded ? 'opacity-100' : 'opacity-0'
+        //   }`}>
+        <div>
             <Explore
                 backgroundColor=""
                 titleColor=""

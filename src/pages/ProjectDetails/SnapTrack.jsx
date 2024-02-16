@@ -61,7 +61,7 @@ const datas = [
 const SnapTrack = () => {
   return (
     <>
-      <div className='max-w-[1300px] mx-auto'>
+    <div className='max-w-[1300px] mx-auto'>
       <div className="bg-white-A700 flex flex-col font-montserrat items-center justify-end mx-auto pt-12">
         <div className="flex flex-col md:gap-10 gap-16 items-center justify-start w-full">
           <div className="flex flex-col w-full">
