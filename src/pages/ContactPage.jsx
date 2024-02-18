@@ -99,13 +99,13 @@ const ContactPage = () => {
                                     </div>
 
                                     <div className="flex flex-col sm:flex-row gap-4 md:gap-8 items-start justify-start w-full md:w-full">
-                                    <div className="flex flex-col gap-4 md:gap-8 items-start justify-center w-full md:w-full">
+                                    <div className="flex flex-col gap-4 md:gap-8 items-start justify-center w-full md:w-full ">
                                         <p
                                             className="text-center text-gray-900 text-xl tracking-[0.60px] uppercase w-auto font-medium font-montserrat"
                                         >
                                             Project Description
                                         </p>
-                                        <textarea className="text-xl bg-white-A700 border border-gray-900_33 flex flex-col items-center justify-center p-4 rounded-[10px] shadow-bs2 w-auto md:w-full"
+                                        <textarea className="text-xl bg-white-A700 border border-gray-900_33 flex flex-col items-center justify-center p-4 rounded-[10px] shadow-bs2 w-full md:w-full "
                                             placeholder="Our mission is to create the most compelling c textile manufacing company of the 21st centuery by driving the world’s trastion to comfort fashion..."
                                             value={description}
                                             onChange={(e) => setDescription(e.target.value)}

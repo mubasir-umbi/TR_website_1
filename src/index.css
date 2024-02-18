@@ -58,8 +58,10 @@
 }
 
 
-
-
+.scale-top:hover {
+  transform: scaleY(1.1); /* Scale vertically (Y-axis) by 110% */
+  transform-origin: top; /* Set the origin point to the top edge */
+}
 
 /* Adjust the style of dot buttons */
 .slick-dots {

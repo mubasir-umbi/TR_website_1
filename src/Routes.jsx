@@ -17,6 +17,7 @@ const SiteRoutes = () => {
   return (
     <React.Suspense>
       <Router>
+        <Header/>
         <Routes>  
           <Route path="/" exact element={<Home />} />
           <Route path="/about_us" element={<AboutUsPage />} />
@@ -29,6 +30,7 @@ const SiteRoutes = () => {
           <Route path="*" element={<PageNotFound />} />
           <Route path="/contact_us" element={<ContactPage />} />
         </Routes>
+        <Footer/>
       </Router>
     </React.Suspense>
   );

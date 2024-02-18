@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import Explore from '../HeroSection/Explore';
 
 const Card = ({ logoSrc, ImageSrc, description }) => {
- 
     return (
         <>
             <div className="flex flex-col lg:flex-row lg:justify-center lg:items-center mx-[26px] sm:mx-[93px] my-5">
@@ -12,7 +11,7 @@ const Card = ({ logoSrc, ImageSrc, description }) => {
                 </div>
 
                 {/* Left side symbol */}
-                <div className="flex justify-start sm:items-center my-4 md:mb-0 md:mr-4 md:order-first">
+                <div className="flex justify-start sm:items-center my-4 md:mb-0 md:mr-4 md:order-first sm:hover:scale-110 transition duration-500">
                     <img src={logoSrc} className='w-[142px] h-auto' />
                 </div>
 

@@ -42,7 +42,7 @@ const Home = () => {
       
 
       <div class="relative">
-        <div class="sticky top-0">
+        <div class="sm:sticky top-0">
         
             <LazyHomeSection4
               backgroundImage="/images/Bluebkg.png"
@@ -54,7 +54,7 @@ const Home = () => {
               secondDescription="Our designs are inspiring millions of people across social media and product teams. We shape new trends and push the boundaries."
             />
           </div>
-        <div class="sticky top-0 ">
+        <div class="sm:sticky top-0 ">
           
             <LazyHomeSection4
               backgroundImage="/images/Darkblue.png"
@@ -66,7 +66,7 @@ const Home = () => {
               secondDescription="Whether you're starting from scratch and need an autonomous team or are looking for staff augmentation with a lot of collaboration, we've got you covered."
             />
           </div>
-        <div class="sticky top-0 ">
+        <div class="sm:sticky top-0 ">
           
             <LazyHomeSection4
               backgroundImage="/images/Darkblue2.png"

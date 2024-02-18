@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import { Link } from 'react-router-dom';
 
 
 function ProjectCarousel({ bg_Color }) {
@@ -65,12 +66,11 @@ function ProjectCarousel({ bg_Color }) {
             items: 3
         },
         tablet: {
-            //   breakpoint: { max: 1024, min: 464 },
             breakpoint: { max: 1250, min: 870 },
             items: 2
         },
         mobile: {
-            //   breakpoint: { max: 464, min: 0 },
+
             breakpoint: { max: 800, min: 0 },
             items: 1
         }
@@ -78,52 +78,156 @@ function ProjectCarousel({ bg_Color }) {
     return (
         <div className={`bg-${bg_Color} py-10`}>
             <div className='max-w-[1300px] mx-auto'>
-                <Carousel responsive={responsive} className='pt-8 mx-5 sm:mx-16 sm:pb-20'>
-                    {carouselItems.map((item, index) => (
-                        <a key={item.id} href={item.href} className="cursor-pointer">
-                            <div className='flex'>
-                                <div className="relative h-[500px] w-[364px] md:w-[364px] sm:h-[500px] rounded-3xl">
-                                    <div className={gradientClasses[index % gradientClasses.length] + ` rounded-3xl h-full relative border border-deep_purple-900`}>
-                                        <img className="absolute -top-8 sm:-top-8 left-8  w-20 h-20 p-4 sm:w-24 sm:h-24" src={item.badge} alt="Badge" />
-                                        <div className='pl-5 sm:pl-10'>
-                                            <div className="fontMontserrat mt-16 pt-8 text-white-A700 text-left font-bold text-3xl mb-2 letter-spacing[-3%]">{item.title}</div>
-                                            <p className="fontMontserrat text-white-A700 text-left font-normal text-sm sm:text-base sm:leading-[25.6px]">{item.description}</p>
-                                        </div>
+          
 
-                                        {/* <div className='flex justify-center'>
-                                        <img className="absolute h-52 w-100 bottom-0 object-cover rounded-t-2xl" src={item.imageSrc} alt="img" />
-                                    </div> */}
-
-                                        {/* <div className='flex justify-center'>
-    <img className="absolute h-52 w-100 bottom-0 object-cover rounded-t-2xl hover:scale-95 transition duration-300" src={item.imageSrc} alt="img" />
-</div> */}
-
+<Carousel responsive={responsive} className='pt-8 mx-5 sm:mx-16 sm:pb-20'>
+    {carouselItems.map((item, index) => (
+        <a key={item.id} href={item.href} className="cursor-pointer">
+            <div className='flex'>
+                <div className="relative h-[500px] w-[364px] md:w-[364px] sm:h-[500px] rounded-3xl">
+                    <div className={gradientClasses[index % gradientClasses.length] + ` rounded-3xl h-full relative border border-deep_purple-900`}>
+                        <img className="absolute -top-8 sm:-top-8 left-8 w-20 h-20 p-4 sm:w-24 sm:h-24 object-cover" src={item.badge} alt="Badge" />
+                        <div className='pl-5 sm:pl-10'>
+                            <div className="fontMontserrat mt-16 pt-8 text-white-A700 text-left font-bold text-3xl mb-2 letter-spacing[-3%]">{item.title}</div>
+                            <p className="fontMontserrat text-white-A700 text-left font-normal text-sm sm:text-base sm:leading-[25.6px]">{item.description}</p>
+                        </div>
                         <div className='flex justify-center'>
-                                            <img className="absolute h-52 w-100 bottom-0  object-cover rounded-t-2xl hover:scale-110 hover:bottom-[10px] transition duration-500" src={item.imageSrc} alt="img" />
-                                        </div>
+                            <img className="absolute h-52 w-100 bottom-0 object-cover rounded-t-2xl  hover:scale-x-110 transition duration-500" src={item.imageSrc} alt="img" />
+                        </div>
 
-                      
+           
 
+                    </div>
+                </div>
+            </div>
+        </a>
+    ))}
+   <Link to={'/projects'}><img className='h-[500px] w-[364px]' src="/images/moreprojects.png" alt="moreProjects" /> </Link> 
+</Carousel>
 
-                                        {/* <div className='flex justify-center'>
-    <img className="absolute h-52 w-100 bottom-0 object-cover rounded-t-2xl hover:scale-x-95 transition-transform duration-500 ease-in-out" src={item.imageSrc} alt="img" />
-</div> */}
-
-
-
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    ))}
-                    <a href="/projects"><img className='h-[500px] w-[364px]' src="/images/moreprojects.png" alt="moreProjects" /></a>
-                </Carousel>
             </div>
         </div>
     );
 }
 
 export default ProjectCarousel;
+
+
+
+
+
+
+
+
+// import React, { useState } from 'react';
+// import Carousel from "react-multi-carousel";
+// import "react-multi-carousel/lib/styles.css";
+
+
+// function ProjectCarousel({ bg_Color }) {
+//     const gradientClasses = [
+//         "bg-gradient-to-b from-indigo-900 to-gray-900",
+//         "bg-gradient-to-b from-red-900 to-gray-900",
+//         "bg-gradient-to-b from-indigo-800 to-gray-900",
+//     ];
+
+//     const carouselItems = [
+//         {
+//             id: 1,
+//             href: '/projects/snaptrack',
+//             imageSrc: '/images/Snaptrack card image.png',
+//             imageSrcCenter: '/images/Snaptrack card image.png',
+//             badge: '/images/Top1.svg',
+//             title: 'SnapTrack',
+//             description: 'A SAAS based state-of-the-art attendance and payroll management software.',
+//             border: 'indigo-900'
+//         },
+//         {
+//             id: 2,
+//             href: '/projects/offroll',
+//             imageSrc: '/images/offrolls.png',
+//             imageSrcCenter: '/images/Screenshot122.png',
+//             badge: '/images/Top2.png',
+//             title: 'Offrolls',
+//             description: 'Helping corporations find the hidden talent within the dense branches.',
+//             border: 'blue-400'
+//         },
+//         {
+//             id: 3,
+//             href: '/projects/bizbuz',
+//             // imageSrc: '/images/bizbuz.png',
+//             imageSrc: '/images/CrossMobile.png',
+//             imageSrcCenter: '/images/Snaptrack card image.png',
+//             badge: '/images/Top3.png',
+//             title: 'Biz & Buz',
+//             description: 'A dynamic B2B and B2C application that revolutionized public transportation.',
+//             border: 'indigo-800'
+//         },
+//         {
+//             id: 4,
+//             href: '/projects/dmct',
+//             // imageSrc: '/images/EmailCampaign.svg',
+//             imageSrc: '/images/EmailCampaign.png',
+//             imageSrcCenter: '/images/EmailCampaignFull.png',
+//             badge: '/images/Top4.png',
+//             title: 'Data Mappers',
+//             description: 'Providing an advanced, self hosted email marketing solution.',
+//             border: 'deep_purple-800'
+//         },
+//     ];
+
+//     const responsive = {
+//         superLargeDesktop: {
+//             breakpoint: { max: 4000, min: 3000 },
+//             items: 3
+//         },
+//         desktop: {
+//             breakpoint: { max: 3000, min: 1250 },
+//             items: 3
+//         },
+//         tablet: {
+//             //   breakpoint: { max: 1024, min: 464 },
+//             breakpoint: { max: 1250, min: 870 },
+//             items: 2
+//         },
+//         mobile: {
+//             //   breakpoint: { max: 464, min: 0 },
+//             breakpoint: { max: 800, min: 0 },
+//             items: 1
+//         }
+//     };
+//     return (
+//         <div className={`bg-${bg_Color} py-10`}>
+//             <div className='max-w-[1300px] mx-auto'>
+//                 <Carousel responsive={responsive} className='pt-8 mx-5 sm:mx-16 sm:pb-20'>
+//                     {carouselItems.map((item, index) => (
+//                         <a key={item.id} href={item.href} className="cursor-pointer">
+//                             <div className='flex'>
+//                                 <div className="relative h-[500px] w-[364px] md:w-[364px] sm:h-[500px] rounded-3xl">
+//                                     <div className={gradientClasses[index % gradientClasses.length] + ` rounded-3xl h-full relative border border-deep_purple-900`}>
+//                                         <img className="absolute -top-8 sm:-top-8 left-8  w-20 h-20 p-4 sm:w-24 sm:h-24" src={item.badge} alt="Badge" />
+//                                         <div className='pl-5 sm:pl-10'>
+//                                             <div className="fontMontserrat mt-16 pt-8 text-white-A700 text-left font-bold text-3xl mb-2 letter-spacing[-3%]">{item.title}</div>
+//                                             <p className="fontMontserrat text-white-A700 text-left font-normal text-sm sm:text-base sm:leading-[25.6px]">{item.description}</p>
+//                                         </div>
+//                                         <div className='flex justify-center'>
+//                                             <img className="absolute h-52 w-100 bottom-0  object-cover rounded-t-2xl hover:scale-110 hover:bottom-[10px] transition duration-500" src={item.imageSrc} alt="img" />
+//                                         </div>
+//                                     </div>
+//                                 </div>
+//                             </div>
+//                         </a>
+//                     ))}
+//                     <a href="/projects"><img className='h-[500px] w-[364px]' src="/images/moreprojects.png" alt="moreProjects" /></a>
+//                 </Carousel>
+//             </div>
+//         </div>
+//     );
+// }
+
+// export default ProjectCarousel;
+
+
 
 // import React, { useState } from 'react';
 // import Carousel from "react-multi-carousel";
