@@ -4,7 +4,7 @@ import logo1 from '../../assets/images/offroll_logo.svg'
 import logo_1_akessia from '../../assets/images/logo_1_akessia.png'
 import logo_1_bizbuz from '../../assets/images/logo_1_bizbuz.png'
 import logo_1_dm from '../../assets/images/logo_1_dm.png'
-import logo_1_gc from '../../assets/images/logo_1_gc.png'
+import logo_1_gc from '../../assets/images/EcDealsLogonewEdit.png'
 import logo_1_la from '../../assets/images/logo_1_la.png'
 import logo_1_norq from '../../assets/images/logo_1_norq.png'
 import logo_1_siloplus from '../../assets/images/logo_1_siloplus.png'
@@ -33,8 +33,8 @@ const HomeSection3 = () => {
     ];
     return (
         <>
-            <div className="flex flex-col md:gap-10 gap-[120px] items-center justify-start max-w-[1300px] mx-auto px-5 sm:px-24 relative">
-                <div className="flex flex-col md:gap-10 gap-16 items-center justify-start  mx-auto md:px-5 w-full">
+            <div className="flex flex-col md:gap-10 gap-[120px] items-center justify-start max-w-[1300px] mx-auto px-5 sm:px-8 relative">
+                <div className="flex flex-col md:gap-10 gap-16 items-center justify-start  mx-auto w-full">
                     <div className="flex flex-col h-auto md:h-auto items-center justify-start  w-full">
                         <div className="flex flex-col md:gap-10 gap-16 items-start justify-start w-auto md:w-full">
                             <div className="flex flex-col gap-8 items-start justify-start w-auto md:w-full">
