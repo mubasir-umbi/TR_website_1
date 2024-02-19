@@ -66,7 +66,7 @@ function Header() {
             <div className="ml-10 flex items-baseline space-x-4">
               <div className="hidden md:block justify-end w-full">
              
-                 <Link to={'/contact_us'}  target='_blank' className="py-2 px-5 bg-deep_purple-800 text-white-A700  hover:bg-white-A700 border-2 border-deep_purple-800 hover:text-deep_purple-800  cursor-pointer font-medium font-montserrat rounded-[23px] text-center text-xl tracking-[0.60px]">
+                 <Link to={'/contact_us'} className="py-2 px-5 bg-deep_purple-800 text-white-A700  hover:bg-white-A700 border-2 border-deep_purple-800 hover:text-deep_purple-800  cursor-pointer font-medium font-montserrat rounded-[23px] text-center text-xl tracking-[0.60px]">
                   CONTACT US
                   </Link> 
               </div>

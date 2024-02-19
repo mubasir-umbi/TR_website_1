@@ -19,18 +19,17 @@ const SiteRoutes = () => {
     <React.Suspense>
       <Router>
         <Routes>
-          <Route path="/" exact element={<><Navbar /><Home /></>} />
-          <Route path="/about_us" element={<><Header /><AboutUsPage /></>} />
-          <Route path="/projects" element={<><Header /><ProjectsPage /></>} />
-          <Route path="/projects/snaptrack" element={<><Header /><SnapTrackPage /></>} />
-          <Route path="/projects/offroll" element={<><Header /><OffrollPage /></>} />
-          <Route path="/projects/bizbuz" element={<><Header /><BizbuzPage /></>} />
-          <Route path="/projects/dmct" element={<><Header /><DmctPage /></>} />
+          <Route path="/" exact element={<><Navbar /><Home /> <Footer /></>} />
+          <Route path="/about_us" element={<><Header /><AboutUsPage /> <Footer /></>} />
+          <Route path="/projects" element={<><Header /><ProjectsPage /> <Footer /></>} />
+          <Route path="/projects/snaptrack" element={<><Header /><SnapTrackPage /> <Footer /></>} />
+          <Route path="/projects/offroll" element={<><Header /><OffrollPage /> <Footer /></>} />
+          <Route path="/projects/bizbuz" element={<><Header /><BizbuzPage /> <Footer /></>} />
+          <Route path="/projects/dmct" element={<><Header /><DmctPage /> <Footer /></>} />
           <Route path="/#services" element={<Home />} />
-          <Route path="*" element={<><Header /><PageNotFound /></>} />
+          <Route path="*" element={<><Header /><PageNotFound /> <Footer /></>} />
           <Route path="/contact_us" element={<><Header /><ContactPage /></>} />
-        </Routes>
-        <Footer />
+        </Routes> 
       </Router>
     </React.Suspense>
   );

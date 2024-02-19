@@ -4,7 +4,6 @@ import emailjs from 'emailjs-com';
 import { toast } from 'react-toastify'
 
 const ContactPage = () => {
-
     const [mail, setMail] = useState('');
     const [mobile, setMobile] = useState('');
     const [description, setDescription] = useState('');
@@ -34,12 +33,14 @@ const ContactPage = () => {
             toast.error('Please enter your description.');
             return;
         }
-        
-        emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', {
-            mail: mail,
-            mobile: mobile,
+
+       
+        emailjs.send(import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
+            import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID, {
+            from_email: mail,
+            from_mobile: mobile,
             description: description
-        }, 'YOUR_USER_ID')
+        }, import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY)
         .then((response) => {
            toast.success('Email sent successfully', response);
             setMail('');
@@ -124,7 +125,7 @@ const ContactPage = () => {
                             </div>
                         </div>
 
-                        <div className="sticky top-0 bg-white-A700 border border-blue_gray-100 border-solid sm:flex-col font-montserrat md:gap-10 gap-[88px] md:h-auto items-start justify-start sm:px-5 px-8 py-9 rounded-[16px] shadow-bs2 md:w-full mb-10">
+                        <div className="sticky top-0 bg-white-A700 border border-blue_gray-100 border-solid sm:flex-col font-montserrat md:gap-10 gap-[88px] md:h-auto items-start justify-start sm:px-5 px-8 py-9 mb-20 sm:mb-40 rounded-[16px] shadow-bs2 w-full">
                             <div className="sm:flex sm:flex-row gap-4 items-center justify-center w-full">
                                 <div className="flex flex-col gap-4 items-center justify-start w-auto sm:w-full">
                                     <p className="text-md lg:text-xl md:text-xl text-center text-gray-900_87 sm:text-xl w-auto font-montserrat font-semibold">PREFER TO TALK?</p>
