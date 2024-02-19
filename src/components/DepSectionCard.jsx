@@ -38,7 +38,7 @@ const DepSection = ({ head1, head2, text, bg, btnBg, img, btn }) => {
                                 </p>
                             </div>
                             <img
-                                className="h-[405px] md:h-auto object-cover w-[405px] hidden lg:block "
+                                className="h-[405px] md:h-auto object-cover w-[405px] hidden lg:block"
                                 src={img}
                                 alt="img"
                             />

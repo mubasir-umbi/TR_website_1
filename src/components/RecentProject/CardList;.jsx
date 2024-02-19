@@ -1,19 +1,17 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Explore from '../HeroSection/Explore';
 
 const Card = ({ logoSrc, ImageSrc, description }) => {
     return (
         <>
-
-
             <div className="flex flex-col lg:flex-row lg:justify-center lg:items-center mx-[26px] sm:mx-[93px] my-5">
                 {/* Right side image */}
-                <div className="m-2 md:order-last">
+                <div className="m-2 md:order-last hover:scale-95 transition duration-500">
                     <img src={ImageSrc} alt="placeholder" className="w-72 h-72 md:w-[300px] md:h-[300px] object-cover" />
                 </div>
 
                 {/* Left side symbol */}
-                <div className="flex justify-start sm:items-center my-4 md:mb-0 md:mr-4 md:order-first">
+                <div className="flex justify-start sm:items-center my-4 md:mb-0 md:mr-4 md:order-first sm:hover:scale-110 transition duration-500">
                     <img src={logoSrc} className='w-[142px] h-auto' />
                 </div>
 
@@ -23,13 +21,13 @@ const Card = ({ logoSrc, ImageSrc, description }) => {
                 </div>
             </div>
 
-
-
         </>
     );
 };
 
 const CardList = () => {
+  
+
     const cardData = [
         {
             logoSrc: "/images/NexcrmLogo.png",
@@ -65,6 +63,9 @@ const CardList = () => {
     ];
 
     return (
+        // <div className={`w-full transition-opacity duration-1000 ease-in-out ${
+        //     isImageLoaded ? 'opacity-100' : 'opacity-0'
+        //   }`}>
         <div>
             <Explore
                 backgroundColor=""
@@ -73,8 +74,6 @@ const CardList = () => {
                 title="Recent Projects"
                 description="Here are a couple of previous project we worked on."
             />
-
-
 
             {cardData.slice(0, 6).map((card, index) => (
                 <React.Fragment key={index}>

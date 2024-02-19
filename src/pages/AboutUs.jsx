@@ -1,18 +1,20 @@
-import React, { lazy, Suspense } from 'react';
-const BuiltFor = lazy(() => import('../components/AboutUs/BuilFor'));
-const WhatWeDo = lazy(() => import('../components/AboutUs/WhatWeDo'));
-const SuccessFull = lazy(() => import('../components/AboutUs/SuccessFull'));
-const HowDoWe = lazy(() => import('../components/AboutUs/HowDoWe'));
-const ReadyToCollabrate = lazy(() => import('../components/AboutUs/ReadyToCollabrate'));
-const OurTechnology = lazy(() => import('../components/AboutUs/OurTechnology'));
-const TeamTrust = lazy(() => import('../components/AboutUs/TeamTrust'));
-const DontLet = lazy(() => import('../components/DontLet'));
+import React, {Suspense } from 'react';
+import BackToTop from '../components/BackToTop';
+import Loader from '../components/loader';
+const BuiltFor = React.lazy(() => import('../components/AboutUs/BuilFor'));
+const WhatWeDo = React.lazy(() => import('../components/AboutUs/WhatWeDo'));
+const SuccessFull = React.lazy(() => import('../components/AboutUs/SuccessFull'));
+const HowDoWe = React.lazy(() => import('../components/AboutUs/HowDoWe'));
+const ReadyToCollabrate = React.lazy(() => import('../components/AboutUs/ReadyToCollabrate'));
+const OurTechnology = React.lazy(() => import('../components/AboutUs/OurTechnology'));
+const TeamTrust = React.lazy(() => import('../components/AboutUs/TeamTrust'));
+const DontLet = React.lazy(() => import('../components/DontLet'));
  
-
-
-function AboutUs() {
+const AboutUs = () => {
   return (
-    <Suspense >
+    <>
+    <BackToTop/>
+    <Suspense fallback={<div className='h-screen'><Loader/></div>}>
       <BuiltFor />
       <WhatWeDo />
       <SuccessFull />
@@ -22,6 +24,7 @@ function AboutUs() {
       <TeamTrust />
       <DontLet />
     </Suspense>
+    </>
   );
 }
 

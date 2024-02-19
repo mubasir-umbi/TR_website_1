@@ -1,12 +1,12 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 import LetsChatSection from "../../components/LetsChatSection";
 import SectionOne from "../../components/projectDetails/SectionOne";
 import SectionTwo from "../../components/projectDetails/SectionTwo";
 import ProjectDetailsSection from "../../components/projectDetails/ProjectDetailsSection";
 import KeyFeturesSection from "../../components/projectDetails/KeyFeturesSection";
-
 import HaveProjForUs from '../../components/projectDetails/HaveProjForUs';
+
 
 
 import buz_buz_img_0 from '../../assets/images/buz_buz_img_0.png'
@@ -15,6 +15,7 @@ import buz_buz_img_2 from '../../assets/images/buz_buz_img_2.png'
 import buz_buz_img_3 from '../../assets/images/buz_buz_img_3.png'
 import buz_buz_img_4 from '../../assets/images/buz_buz_img_4.png'
 import buz_buz_img_5 from '../../assets/images/buz_buz_img_5.png'
+import BackToTop from '../../components/BackToTop';
 
 const text1 = `A dynamic B2B and B2C application that revolutionized public
 transportation experience. Biz&Buz seamlessly integrates
@@ -41,6 +42,7 @@ Advertisement Publishing: Facilitate targeted marketing
 strategies. Rewards Points: Build customer loyalty and
 engagement. Exclusive Business Offers: Increase sales through
 personalized promotions.`
+
 
 const datas = [
   {
@@ -69,15 +71,17 @@ const datas = [
   },
 ]
 
-
-
 const BizBuz = () => {
   return (
     <>
-      <div className="bg-white-A700 flex flex-col font-montserrat items-center justify-end mx-auto pt-12 w-full">
+      {/* <div className="bg-white-A700 flex flex-col font-montserrat items-center justify-end mx-auto pt-12 w-full">
         <div className="flex flex-col md:gap-10 gap-16 items-center justify-start w-full">
-          <div className="flex flex-col items-start justify-start  mx-1 md:px-5 w-full">
-
+          <div className="flex flex-col items-start justify-start  mx-1 md:px-5 w-full"> */}
+      <div className='max-w-[1300px] mx-auto'>
+      <div className="bg-white-A700 flex flex-col font-montserrat items-center justify-end mx-auto pt-12">
+        <div className="flex flex-col md:gap-10 gap-16 items-center justify-start w-full">
+          <div className="flex flex-col w-full">
+          <BackToTop/>
             <SectionOne 
                  name = {buz_buz_img_0} 
                  text = {text1} 
@@ -125,9 +129,9 @@ const BizBuz = () => {
           </div>
         </div>
       </div>
-
+      </div>
       <HaveProjForUs/>
-
+      
     </>
   )
 }

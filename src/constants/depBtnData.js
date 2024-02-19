@@ -1,4 +1,4 @@
-const btnCls = 'cursor-pointer text-base text-center rounded-[29px] px-6 py-3 sm:p-[19px] text-white-A700 mb-3 sm:mr-2'
+const btnCls = 'cursor-pointer text-sm md:text-base text-center rounded-[29px] px-6 py-3 sm:p-[19px] text-white-A700 mb-3 sm:mr-2'
 
 
 export const dep1Btn = [

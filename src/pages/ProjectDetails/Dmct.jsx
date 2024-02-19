@@ -8,6 +8,7 @@ import SectionTwo from "../../components/projectDetails/SectionTwo";
 import ProjectDetailsSection from "../../components/projectDetails/ProjectDetailsSection";
 import KeyFeturesSection from "../../components/projectDetails/KeyFeturesSection";
 
+
 import dmct_img_0 from '../../assets/images/dmct_img_0.png'
 import dmct_img_1 from '../../assets/images/dmct_img_1.png'
 import dmct_img_2 from '../../assets/images/dmct_img_2.png'
@@ -17,6 +18,7 @@ import dmct_img_4 from '../../assets/images/dmct_img_4.png'
 import dmct_img_5 from '../../assets/images/dmct_img_5.png'
 
 import HaveProjForUs from '../../components/projectDetails/HaveProjForUs';
+import BackToTop from '../../components/BackToTop';
 
 
 const text1 = `DataMapers Group sought to provide an advanced, self-hosted
@@ -74,10 +76,11 @@ const color = 'text-indigo-111'
 const Dmct = () => {
   return (
     <>
-      <div className="bg-white-A700 flex flex-col font-montserrat items-center justify-end mx-auto w-full relative">
+      <div className='max-w-[1300px] mx-auto'>
+      <div className="bg-white-A700 flex flex-col font-montserrat items-center justify-end mx-auto pt-12">
         <div className="flex flex-col md:gap-10 gap-16 items-center justify-start w-full">
-          <div className="flex flex-col items-start justify-start mx-1 md:px-5 w-full">
-
+          <div className="flex flex-col w-full">
+          <BackToTop/>
             <SectionOne 
                  name = {dmct_img_0 } 
                  text = {text1} 
@@ -125,7 +128,7 @@ const Dmct = () => {
                         
           </div>
         </div>
-        
+        </div>
       </div>
       <HaveProjForUs/>
       

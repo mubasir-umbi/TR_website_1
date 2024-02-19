@@ -3,6 +3,7 @@ import React from 'react';
 function TeamTrust() {
     return (
         <>
+        <div className='max-w-[1300px] mx-auto my-10'>
             <div className="flex flex-col md:flex-row px-5 mb-[-20px] md:mb-0 lg:px-28 lg:pt-28">
                 <img
                     src="/images/team.png"
@@ -34,6 +35,7 @@ function TeamTrust() {
                         loading="lazy"
                     />
                 </div>
+            </div>
             </div>
         </>
     );
