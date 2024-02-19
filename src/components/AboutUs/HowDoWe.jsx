@@ -8,32 +8,32 @@ import React, { Suspense } from 'react';
         const images = [
             {
                 id: 1,
-                src: '/images/breifing.png',
+                src: '/images/breifing.webp',
                 alt: 'Image 1',
             },
             {
                 id: 2,
-                src: '/images/documentation.png',
+                src: '/images/documentation.webp',
                 alt: 'Image 2',
             },
             {
                 id: 3,
-                src: '/images/wireframe.png',
+                src: '/images/wireframe.webp',
                 alt: 'Image 3',
             },
             {
                 id: 4,
-                src: '/images/development.png',
+                src: '/images/development.webp',
                 alt: 'Image 4',
             },
             {
                 id: 5,
-                src: '/images/quality.png',
+                src: '/images/quality.webp',
                 alt: 'Image 5',
             },
             {
                 id: 6,
-                src: '/images/deployment.png',
+                src: '/images/deployment.webp',
                 alt: 'Image 6',
             },
         ];

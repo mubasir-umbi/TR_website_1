@@ -9,13 +9,12 @@ import ProjectDetailsSection from "../../components/projectDetails/ProjectDetail
 import KeyFeturesSection from "../../components/projectDetails/KeyFeturesSection";
 
 
-import dmct_img_0 from '../../assets/images/dmct_img_0.png'
-import dmct_img_1 from '../../assets/images/dmct_img_1.png'
-import dmct_img_2 from '../../assets/images/dmct_img_2.png'
-import dmct_img_3 from '../../assets/images/dmct_img_3.png'
-import dmct_img_3_1 from '../../assets/images/dmct_img_3.1.png'
-import dmct_img_4 from '../../assets/images/dmct_img_4.png'
-import dmct_img_5 from '../../assets/images/dmct_img_5.png'
+import dmct_img_0 from '../../assets/images/dmct_img_0.webp'
+import dmct_img_1 from '../../assets/images/dmct_img_1.webp'
+import dmct_img_2 from '../../assets/images/dmct_img_2.webp'
+import dmct_img_3 from '../../assets/images/dmct_img_3.1.webp'
+import dmct_img_4 from '../../assets/images/dmct_img_4.webp'
+import dmct_img_5 from '../../assets/images/dmct_img_5.webp'
 
 import HaveProjForUs from '../../components/projectDetails/HaveProjForUs';
 import BackToTop from '../../components/BackToTop';
@@ -104,7 +103,7 @@ const Dmct = () => {
             <ProjectDetailsSection
                  head1 = 'A new solution'
                  head2 = 'That people love' 
-                 img = {dmct_img_3_1}
+                 img = {dmct_img_3}
                  align = 'items-end'
                  color = {color}
                  text = {detText2}

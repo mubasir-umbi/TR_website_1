@@ -45,8 +45,8 @@ const Home = () => {
         <div class="sm:sticky top-0">
         
             <LazyHomeSection4
-              backgroundImage="/images/Bluebkg.png"
-              imageUrl="/images/3D circless.png"
+              backgroundImage="/images/Bluebkg.webp"
+              imageUrl="/images/3Dcircless.webp"
               title="We’re a design driven team"
               firstHeading=" Designing world-class products & brands"
               firstDescription="We’ve helped top startups and other enterprises turn their ideas and goals into refined products and brands that generate millions in revenue."
@@ -57,8 +57,8 @@ const Home = () => {
         <div class="sm:sticky top-0 ">
           
             <LazyHomeSection4
-              backgroundImage="/images/Darkblue.png"
-              imageUrl="/images/feasble.png"
+              backgroundImage="/images/Darkblue.webp"
+              imageUrl="/images/feasble.webp"
               title="We get things done, fast & feasible "
               firstHeading="Agile and transparent"
               firstDescription="Forget a useless 80-slide presentation. We focus on design deliverables every week. And when we commit to a deadline, we make it happen. Always."
@@ -69,8 +69,8 @@ const Home = () => {
         <div class="sm:sticky top-0 ">
           
             <LazyHomeSection4
-              backgroundImage="/images/Darkblue2.png"
-              imageUrl="/images/afford.png"
+              backgroundImage="/images/Darkblue2.webp"
+              imageUrl="/images/afford.webp"
               title="We made world-class services affordable."
               firstHeading="We make the complex simple"
               firstDescription="From neurotech companies to admin tools with intricate access policies, we understand your product and simplify it for the people who use it."

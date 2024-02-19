@@ -26,14 +26,11 @@ function BuiltFor() {
                 </div>
 
                 <div className="text-left mt-7">
-                    {/* <button className="relative items-center font-Montserrat md:my-1 pl-6 pr-[70px] py-4 font-bold text-xl leading-normal leading-trim text-white-A700 uppercase tracking-wide bg-deep_purple-800 rounded-full shadow-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-blue-200 mb-4 md:mb-0 md:mr-4">
-                        LET’S TALK
-                    </button> */}
                     <LetsTalk/>
                 </div>
 
                 <img
-                    src="/images/chair.png"
+                    src="/images/chair.webp"
                     alt="chair"
                     className="absolute w-96 h-112 right-3 md:top-[220px] md:pb-20 hidden lg:block"
                 />

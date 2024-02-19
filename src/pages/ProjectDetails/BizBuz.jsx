@@ -7,14 +7,12 @@ import ProjectDetailsSection from "../../components/projectDetails/ProjectDetail
 import KeyFeturesSection from "../../components/projectDetails/KeyFeturesSection";
 import HaveProjForUs from '../../components/projectDetails/HaveProjForUs';
 
-
-
-import buz_buz_img_0 from '../../assets/images/buz_buz_img_0.png'
-import buz_buz_img_1 from '../../assets/images/buz_buz_img_1.png'
-import buz_buz_img_2 from '../../assets/images/buz_buz_img_2.png'
-import buz_buz_img_3 from '../../assets/images/buz_buz_img_3.png'
-import buz_buz_img_4 from '../../assets/images/buz_buz_img_4.png'
-import buz_buz_img_5 from '../../assets/images/buz_buz_img_5.png'
+import buz_buz_img_0 from '../../assets/images/buz_buz_img_0.webp'
+import buz_buz_img_1 from '../../assets/images/buz_buz_img_1.webp'
+import buz_buz_img_2 from '../../assets/images/buz_buz_img_2.webp'
+import buz_buz_img_3 from '../../assets/images/buz_buz_img_3.webp'
+import buz_buz_img_4 from '../../assets/images/buz_buz_img_4.webp'
+import buz_buz_img_5 from '../../assets/images/buz_buz_img_5.webp'
 import BackToTop from '../../components/BackToTop';
 
 const text1 = `A dynamic B2B and B2C application that revolutionized public
@@ -124,8 +122,7 @@ const BizBuz = () => {
                  img = {buz_buz_img_5}
                  color = {'text-indigo-A200'}
                  text = {key_fet}
-             />
-            
+             />     
           </div>
         </div>
       </div>

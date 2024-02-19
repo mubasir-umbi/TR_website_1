@@ -20,7 +20,7 @@ const TestimonyCarousel = ({ users }) => {
      <Slider {...settings}>
       {users.map((user, index) => (
         <div key={index} className='py-16 px-4 max-w-[1300px] mx-auto'>
-            <div className="sm:w-[73%] sm:h-auto bg-white-A700 border border-blue_gray-100 border-solid flex flex-col items-center justify-end p-10 px-2 sm:px-5 rounded-[24px] shadow-bs1 mx-auto">
+            <div className="sm:w-[73%] sm:h-auto bg-white-A700 border border-blue_gray-100 border-solid flex flex-col items-center justify-end p-10 px-2 sm:px-5 rounded-[24px] shadow-lg mx-auto">
               <div className="flex flex-col gap-6 items-center justify-start mt-[5px] w-full md:w-full px-3">
                 <p className="sm:leading-[160.00%] leading-[140.00%]  md:max-w-[90%] text-md md:text-[22px] text-center text-gray-900 sm:text-2xl tracking-[-0.72px] font-medium font-montserrat">
                   &quot;{user.comment}&quot;

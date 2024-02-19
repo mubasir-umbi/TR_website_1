@@ -1,10 +1,11 @@
 import React, { useRef, useState,useEffect } from 'react';
-import logo from "../assets/TR_logo.png";
+import logo from "../assets/images/TR_logo.webp";
 import { CgMenuRound, CgCloseO } from "react-icons/cg";
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const Location = useLocation()
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -54,9 +55,17 @@ function Navbar() {
           </div>
           <div className="hidden lg:block">
             <div className="ml-10 flex items-baseline space-x-4">
-           <Link to={'/about_us'}  className="text-gray-900 hover:text-deep_purple-800 px-4 py-2 rounded-full uppercase font-medium font-montserrat text-xl tracking-[-0.60px]">ABOUT US </Link> 
+           {/* <Link to={'/about_us'}  className="text-gray-900 hover:text-deep_purple-800 px-4 py-2 rounded-full uppercase font-medium font-montserrat text-xl tracking-[-0.60px]">ABOUT US </Link> 
             <a href='#services'  className="text-gray-900 hover:text-deep_purple-800  px-4 py-2 rounded-full uppercase font-medium font-montserrat text-xl tracking-[-0.60px]">SERVICES </a> 
             <Link to={'/projects'}  className="text-gray-900 hover:text-deep_purple-800  px-4 py-2 rounded-full uppercase font-medium font-montserrat text-xl tracking-[-0.60px]">PROJECTS </Link> 
+            */}
+              <Link to={'/about_us'} className={`text-gray-900  hover:text-deep_purple-800 px-4 py-2 rounded-full uppercase font-medium font-montserrat text-xl tracking-[-0.60px] ${Location.pathname == "/about_us" ? "text-indigo-600" : "text-brand-darkblue"}`}
+              >ABOUT US </Link>
+              <a href='#services' className={`text-gray-900  hover:text-deep_purple-800 px-4 py-2 rounded-full uppercase font-medium font-montserrat text-xl tracking-[-0.60px] ${Location.pathname == "/#services" ? "text-indigo-600" : "text-brand-darkblue"}`}
+              >SERVICES </a>
+              <Link to={'/projects'} className={`text-gray-900  hover:text-deep_purple-800 px-4 py-2 rounded-full uppercase font-medium font-montserrat text-xl tracking-[-0.60px] ${Location.pathname == "/projects" ? "text-indigo-600" : "text-brand-darkblue"}`}>PROJECTS </Link>
+
+
             </div>
           </div>
 

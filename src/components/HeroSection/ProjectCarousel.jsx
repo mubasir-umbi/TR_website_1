@@ -2,7 +2,11 @@ import React, { useState } from 'react';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { Link } from 'react-router-dom';
-
+import SnapCardImage from '../../assets/images/SnapCardImage.webp'
+import offrolls from '../../assets/images/offrolls.webp'
+import CrossMobile from '../../assets/images/CrossMobile.webp'
+import EmailCampaign from '../../assets/images/EmailCampaign.webp'
+import MoreProjectImage from '../../assets/images/moreprojects.webp'
 
 function ProjectCarousel({ bg_Color }) {
     const gradientClasses = [
@@ -20,8 +24,8 @@ function ProjectCarousel({ bg_Color }) {
         {
             id: 1,
             to: '/projects/snaptrack',
-            imageSrc: '/images/Snaptrack card image.png',
-            imageSrcCenter: '/images/Snaptrack card image.png',
+            // imageSrc: '/images/Snaptrack card image.png',
+            imageSrc: SnapCardImage,
             badge: '/images/Top1.svg',
             title: 'SnapTrack',
             description: 'A SAAS based state-of-the-art attendance and payroll management software.',
@@ -30,8 +34,8 @@ function ProjectCarousel({ bg_Color }) {
         {
             id: 2,
             to: '/projects/offroll',
-            imageSrc: '/images/offrolls.png',
-            imageSrcCenter: '/images/Screenshot122.png',
+            // imageSrc: '/images/offrolls.png',
+            imageSrc: offrolls,
             badge: '/images/Top2.png',
             title: 'Offrolls',
             description: 'Helping corporations find the hidden talent within the dense branches.',
@@ -40,9 +44,8 @@ function ProjectCarousel({ bg_Color }) {
         {
             id: 3,
             to: '/projects/bizbuz',
-            // imageSrc: '/images/bizbuz.png',
-            imageSrc: '/images/CrossMobile.png',
-            imageSrcCenter: '/images/Snaptrack card image.png',
+            // imageSrc: '/images/CrossMobile.png',
+            imageSrc: CrossMobile,
             badge: '/images/Top3.png',
             title: 'Biz & Buz',
             description: 'A dynamic B2B and B2C application that revolutionized public transportation.',
@@ -51,9 +54,8 @@ function ProjectCarousel({ bg_Color }) {
         {
             id: 4,
             to: '/projects/dmct',
-            // imageSrc: '/images/EmailCampaign.svg',
-            imageSrc: '/images/EmailCampaign.png',
-            imageSrcCenter: '/images/EmailCampaignFull.png',
+            // imageSrc: '/images/EmailCampaign.png',
+            imageSrc:EmailCampaign,
             badge: '/images/Top4.png',
             title: 'Data Mappers',
             description: 'Providing an advanced, self hosted email marketing solution.',
@@ -81,7 +83,7 @@ function ProjectCarousel({ bg_Color }) {
         }
     };
     return (
-        <div className={`bg-${bg_Color} py-10`}>
+        <div className={`bg-${bg_Color}  sm:py-10`}>
             <div className='max-w-[1300px] mx-auto'>
           
 
@@ -89,23 +91,26 @@ function ProjectCarousel({ bg_Color }) {
     {carouselItems.map((item, index) => (
         <Link  to={item.to} key={item.id} className="cursor-pointer">
             <div className='flex'>
-                <div className={`relative h-[500px] w-[364px] md:w-[364px] sm:h-[500px] rounded-3xl `}>
-                    <div className={gradientClasses[index % gradientClasses.length] + ` rounded-3xl h-full relative border ${BorderClasses[index % BorderClasses.length]}`}>
-                        <img className="absolute -top-8 sm:-top-8 left-8 w-20 h-20 p-4 sm:w-24 sm:h-24 object-cover" src={item.badge} alt="Badge" />
+                <div className={`relative h-[500px] w-[364px] md:w-[364px] sm:h-[500px] rounded-3xl hover:scale-95 transition duration-500 `}>
+                    <div className={gradientClasses[index % gradientClasses.length] + ` rounded-3xl h-full m-2 relative border ${BorderClasses[index % BorderClasses.length]}`}>
+                        <img className="absolute -top-8 sm:-top-8 left-8 w-24 h-24 p-4 sm:w-24 sm:h-24 object-cover" src={item.badge} alt="Badge" />
                         <div className='pl-5 sm:pl-10'>
                             <div className="fontMontserrat mt-16 pt-8 text-white-A700 text-left font-bold text-3xl mb-2 letter-spacing[-3%]">{item.title}</div>
                             <p className="fontMontserrat text-white-A700 text-left font-normal text-sm sm:text-base sm:leading-[25.6px]">{item.description}</p>
                         </div>
-                        <div className='flex justify-center'>
+                        {/* <div className='flex justify-center'>
                             <img className="absolute h-[200px] w-100 bottom-0 object-cover rounded-t-2xl hover:rounded-b-2xl  hover:scale-x-110 transition duration-500" src={item.imageSrc} alt="img" />
-                        </div>
+                        </div> */}
+                        <div className='flex justify-center'>
+                                           <img className="absolute h-52 w-100 bottom-0  object-cover rounded-t-2xl hover:rounded-b-2xl hover:scale-105 hover:bottom-[5px] transition duration-500" src={item.imageSrc} alt="img" />
+                                       </div>
 
                     </div>
                 </div>
             </div>
         </Link>
     ))}
-   <Link to={'/projects'}><img className='h-[500px] w-[364px]' src="/images/moreprojects.png" alt="moreProjects" /> </Link> 
+   <Link to={'/projects'}><img className='h-[500px] w-[364px] m-2 hover:scale-95 transition duration-500' src={MoreProjectImage} alt="moreProjects" /> </Link> 
 </Carousel>
 
             </div>

@@ -10,7 +10,7 @@ const HaveProjForUs = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center z-0 rounded-xl"
           style={{
-            backgroundImage: "url('/images/CollabrateBackground.png')",
+            backgroundImage: "url('/images/CollabrateBackground.webp')",
 
           }}
         ></div>

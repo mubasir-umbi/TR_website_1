@@ -128,7 +128,7 @@ const ContactPage = () => {
                             <div className="sm:flex sm:flex-row gap-4 items-center justify-center w-full">
                                 <div className="flex flex-col gap-4 items-center justify-start w-auto sm:w-full">
                                     <p className="text-md lg:text-xl md:text-xl text-center text-gray-900_87 sm:text-xl w-auto font-montserrat font-semibold">PREFER TO TALK?</p>
-                                    <a href="tel:9880966668" class="text-lg lg:text-2xl sm:text-[20px] text-center text-gray-900 underline w-auto font-montserrat font-semibold">Schedule a call</a>
+                                    <a href="tel:9743061810" class="text-lg lg:text-2xl sm:text-[20px] text-center text-gray-900 underline w-auto font-montserrat font-semibold">Schedule a call</a>
                                </div>
                                 <div className="flex flex-col gap-4 items-center justify-start w-auto sm:w-full">
                                     <p className="text-md lg:text-xl md:text-[22px] text-center text-gray-900_87 sm:text-xl w-auto font-montserrat font-semibold">OLD, BUT GOLD</p>
@@ -136,7 +136,7 @@ const ContactPage = () => {
                                   </div>
                                 <div className="flex flex-col gap-4 items-center justify-start w-auto sm:w-full">
                                     <p className="text-md lg:text-xl md:text-[22px] text-center text-gray-900_87 sm:text-xl uppercase w-auto font-montserrat font-semibold">Messenger?</p>
-                                    <a href="https://wa.me/9880966668" class="text-lg lg:text-2xl sm:text-[23px] text-center text-gray-900 underline w-auto font-montserrat font-semibold" target="_blank">Whatsapp</a>
+                                    <a href="https://wa.me/9743061810" class="text-lg lg:text-2xl sm:text-[23px] text-center text-gray-900 underline w-auto font-montserrat font-semibold" target="_blank">Whatsapp</a>
 
                                 </div>
                             </div>

@@ -1,23 +1,17 @@
 import React from "react";
-
-
-import LetsChatSection from "../../components/LetsChatSection";
 import SectionOne from "../../components/projectDetails/SectionOne";
 import SectionTwo from "../../components/projectDetails/SectionTwo";
 import ProjectDetailsSection from "../../components/projectDetails/ProjectDetailsSection";
 import KeyFeturesSection from "../../components/projectDetails/KeyFeturesSection";
-
-import HaveProjForUs from '../../components/projectDetails/HaveProjForUs';
-import img_group230198 from '../../assets/images/img_group230198.svg'
-import offroll_img_1 from '../../assets/images/offroll_img_1.png'
-import offroll_img_2 from '../../assets/images/offroll_img_2.png'
-import offroll_img_3 from '../../assets/images/offroll_img_3.png'
-import offroll_img_4 from '../../assets/images/offroll_img_4.png'
-import offroll_key_f_img from '../../assets/images/offroll_key_f_img.png'
-import img_group2301911 from '../../assets/images/img_group2301911.png'
-import Group_230192 from '../../assets/images/Group 230192.png'
 import BackToTop from "../../components/BackToTop";
+import HaveProjForUs from '../../components/projectDetails/HaveProjForUs';
 
+import offrollsHeading from '../../assets/images/offrollsHeading.webp'
+import offroll_img_1 from '../../assets/images/offroll_img_1.webp'
+import offroll_img_2 from '../../assets/images/offroll_img_2.webp'
+import offroll_img_3 from '../../assets/images/offroll_img_3.webp'
+import offroll_img_4 from '../../assets/images/offroll_img_4.webp'
+import offroll_key_f_img from '../../assets/images/offroll_key_f_img.webp'
 
 
 const text = `The vision offrolls is to help corporations find the talent
@@ -83,7 +77,7 @@ const Offroll = () => {
           <div className="flex flex-col w-full">
           <BackToTop/>
             <SectionOne 
-                 name = {img_group230198} 
+                 name = {offrollsHeading} 
                  text = {text} 
                  image = {offroll_img_1} 
             />

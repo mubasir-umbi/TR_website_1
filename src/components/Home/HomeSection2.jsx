@@ -1,13 +1,21 @@
 import React, { useRef } from "react";
 
 import DepSectionCard from "../DepSectionCard";
-import dep_card_img_1 from "../../assets/images/dep_card_img_1.png";
-import dep_card_img_2 from "../../assets/images/dep_card_img_2.png";
-import dep_card_img_3 from "../../assets/images/dep_card_img_3.png";
-import dep_card_img_4 from "../../assets/images/dep_card_img_4.png";
-import dep_card_img_5 from "../../assets/images/dep_card_img_5.png";
-import dep_card_img_6 from "../../assets/images/dep_card_img_6.png";
-import dep_card_img_7 from "../../assets/images/dep_card_img_7.png";
+// import dep_card_img_1 from "../../assets/images/dep_card_img_1.png";
+// import dep_card_img_2 from "../../assets/images/dep_card_img_2.png";
+// import dep_card_img_3 from "../../assets/images/dep_card_img_3.png";
+// import dep_card_img_4 from "../../assets/images/dep_card_img_4.png";
+// import dep_card_img_5 from "../../assets/images/dep_card_img_5.png";
+// import dep_card_img_6 from "../../assets/images/dep_card_img_6.png";
+// import dep_card_img_7 from "../../assets/images/dep_card_img_7.png";
+
+import dep_card_img_1 from "../../assets/images/dep_card_img_1.webp";
+import dep_card_img_2 from "../../assets/images/dep_card_img_2.webp";
+import dep_card_img_3 from "../../assets/images/dep_card_img_3.webp";
+import dep_card_img_4 from "../../assets/images/dep_card_img_4.webp";
+import dep_card_img_5 from "../../assets/images/dep_card_img_5.webp";
+import dep_card_img_6 from "../../assets/images/dep_card_img_6.webp";
+import dep_card_img_7 from "../../assets/images/dep_card_img_7.webp";
 import { dep1Btn, dep2Btn, dep3Btn, dep4Btn, dep5Btn, dep6Btn, dep7Btn } from "../../constants/depBtnData";
 
 const btBg1 = 'bg-gray-900_04 text-white-A700'
@@ -120,7 +128,6 @@ const HomeSection2 = () => {
                                         btn={dep7Btn}
                                         btnBg={btBg1}
                                     />
-
                                 </div></div>
                         </div>
                     </div>
