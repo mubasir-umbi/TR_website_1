@@ -5,6 +5,7 @@ import backgroundImage from '../../assets/images/background.webp'
 import ArrowGroup from '../../assets/images/arrowGroup.webp'
 import ThreeCards from '../../assets/images/hero_Image1_ThreeCards.webp'
 import GraphGroup from '../../assets/images/GraphGroup.webp'
+import FadeIn from '../FadeIn';
 
 function WeTransform() {
     return (
@@ -46,7 +47,18 @@ function WeTransform() {
                     />
                 </div>
 
-                <div className="flex justify-center px-4 sm:px-6 lg:px-8">
+                {/* <FadeIn id="fade-in-element">
+  <div className="flex justify-center px-4 sm:px-6 lg:px-8">
+                    <img
+                       
+                        src={ThreeCards}
+                        alt="Responsive Image"
+                        className="max-w-full mt-10 md:mt-24"
+                    />
+                </div>
+</FadeIn> */}
+
+<div className="flex justify-center px-4 sm:px-6 lg:px-8">
                     <img
                         // src="/images/ThreeCards.svg"
                         src={ThreeCards}
@@ -54,6 +66,8 @@ function WeTransform() {
                         className="max-w-full mt-10 md:mt-24"
                     />
                 </div>
+
+                
                 </div>
                 <img
                     // src="/images/GraphGroup.png"

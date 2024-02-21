@@ -84,6 +84,55 @@
 
 
 
+/* for MoreProject Button */
+.arrow-icon {
+  transition: transform 0.3s ease;
+}
+.group:hover .arrow-icon {
+  transform: rotate(-45deg);
+}
+
+
+/* radialGradient */
+/* Define radial gradient classes */
+/* .bg-gradient-radial-indigo {
+  background-image: radial-gradient(circle, #4F46E5, #333333);
+} */
+
+/* .bg-gradient-radial-red {
+  background-image: radial-gradient(circle, #DC2626, #333333);
+} */
+
+/* .bg-gradient-radial-indigo-800 {
+  background-image: radial-gradient(circle, #6366F1, #333333);
+} */
+
+
+.bg-gradient-radial-indigo {
+  /* background-image: radial-gradient(circle, #4F46E5, #333333); */
+  background-image:  radial-gradient(100% 100% at 59.89% 0%, #5B6ED3 0%, #232C6B 73.5%, #0B103E 100%);
+}
+
+
+.bg-gradient-radial-red {
+  background-image:  radial-gradient(100% 100% at 59.89% 0%, #F25924 0%, #5E1800 73.5%, #220900 100%);
+}
+
+
+.bg-gradient-radial-indigo-800 {
+  background-image:  radial-gradient(100% 100% at 59.89% 0%, #6D65FF 0%, #07016D 73.5%, #0B103E 100%);
+}
+
+.bg-gradient-radial-purple {
+  background-image:  radial-gradient(100% 100% at 59.89% 0%, #00AFF0 0%, #096486 73.5%, #002C3C 100%);
+}
+
+
+
+
+
+
+
 
 /* loader css */
 .banter-loader {

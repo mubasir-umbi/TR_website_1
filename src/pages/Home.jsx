@@ -2,6 +2,9 @@ import React, { Suspense } from 'react';
 import { usersResponse } from '../constants/userResponse'
 import BackToTop from '../components/BackToTop';
 import Loader from '../components/loader';
+import Chatbox from '../components/Chat/ChatBox';
+import ChatApp from '../components/Chat/ChatApp';
+import CarouselControlsOutside from '../components/Carousal';
 const LazyHeroOne = React.lazy(() => import('../components/HeroSection/SectionOne'));
 const LazyProjectCarousel = React.lazy(() => import('../components/HeroSection/ProjectCarousel'));
 const LazyHomeSection1 = React.lazy(() => import('../components/Home/HomeSection1'));
@@ -16,10 +19,12 @@ const LazyExplore = React.lazy(() => import('../components/HeroSection/Explore')
 const Home = () => {
   return (
     <div>
+
       <BackToTop />
-      <Suspense fallback={<div className='h-screen'> <Loader/></div> }>
+      <ChatApp />
+      <Suspense fallback={<div className='h-screen'> <Loader /></div>}>
         <LazyHeroOne />
-      
+
         <LazyExplore
           backgroundColor="gray-900"
           titleColor="blue-400"
@@ -27,23 +32,22 @@ const Home = () => {
           title="Explore What We Have Done"
           description="See how we have worked on projects for clients."
         />
-  
+
+        {/* <CarouselControlsOutside/> */}
+
         <LazyProjectCarousel bg_Color='gray-900' />
-      
+
         <LazyHomeSection1 />
-
-        <LazyHomeSection2 /> 
-      
+        <LazyHomeSection2 />
         <LazyHomeSection3 />
-      
-      <div className="carousel-container">   
-          <LazyTestimonyCarousel users={usersResponse} />     
-      </div>
-      
 
-      <div class="relative">
-        <div class="sm:sticky top-0">
-        
+        <div className="carousel-container">
+          <LazyTestimonyCarousel users={usersResponse} />
+        </div>
+
+        <div class="relative">
+          <div class="sm:sticky top-0">
+
             <LazyHomeSection4
               backgroundImage="/images/Bluebkg.webp"
               imageUrl="/images/3Dcircless.webp"
@@ -54,8 +58,7 @@ const Home = () => {
               secondDescription="Our designs are inspiring millions of people across social media and product teams. We shape new trends and push the boundaries."
             />
           </div>
-        <div class="sm:sticky top-0 ">
-          
+          <div class="sm:sticky top-0 ">
             <LazyHomeSection4
               backgroundImage="/images/Darkblue.webp"
               imageUrl="/images/feasble.webp"
@@ -66,20 +69,20 @@ const Home = () => {
               secondDescription="Whether you're starting from scratch and need an autonomous team or are looking for staff augmentation with a lot of collaboration, we've got you covered."
             />
           </div>
-        <div class="sm:sticky top-0 ">
-          
+          <div class="sm:sticky top-0 ">
             <LazyHomeSection4
               backgroundImage="/images/Darkblue2.webp"
-              imageUrl="/images/afford.webp"
+              imageUrl="/images/affordnew.webp"
               title="We made world-class services affordable."
               firstHeading="We make the complex simple"
               firstDescription="From neurotech companies to admin tools with intricate access policies, we understand your product and simplify it for the people who use it."
               secondHeading="Commited to putting a smile on people’s faces"
               secondDescription="Get continuous high-quality design & fast turnaround at a flat rate to help scale your business. It helps you save time on hiring and career laddering and avoid the hustle of dealing with expensive agencies."
-            />   
+            />
+          </div>
         </div>
-      </div>    
         <LazyDontLet />
+
       </Suspense>
     </div>
   );

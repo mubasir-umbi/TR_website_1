@@ -17,7 +17,7 @@ function Navbar() {
       if (target) {
         window.scrollTo({
           top: target.offsetTop,
-          behavior: 'smooth'
+          behavior: 'smooth',      
         });
       }
     };
@@ -26,7 +26,6 @@ function Navbar() {
     if (servicesLink) {
       servicesLink.addEventListener('click', smoothScroll);
     }
-
     return () => {
       if (servicesLink) {
         servicesLink.removeEventListener('click', smoothScroll);
@@ -63,6 +62,7 @@ function Navbar() {
               >ABOUT US </Link>
               <a href='#services' className={`text-gray-900  hover:text-deep_purple-800 px-4 py-2 rounded-full uppercase font-medium font-montserrat text-xl tracking-[-0.60px] ${Location.pathname == "/#services" ? "text-indigo-600" : "text-brand-darkblue"}`}
               >SERVICES </a>
+
               <Link to={'/projects'} className={`text-gray-900  hover:text-deep_purple-800 px-4 py-2 rounded-full uppercase font-medium font-montserrat text-xl tracking-[-0.60px] ${Location.pathname == "/projects" ? "text-indigo-600" : "text-brand-darkblue"}`}>PROJECTS </Link>
 
 
