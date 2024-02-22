@@ -1,4 +1,5 @@
-import React,{Suspense} from "react";
+import React, { Suspense } from "react";
+import { Fade } from "react-awesome-reveal";
 import RecentProject from "../components/RecentProject";
 import CardList from "../components/RecentProject/CardList;";
 import ProjectCarousel from "../components/HeroSection/ProjectCarousel";
@@ -11,21 +12,19 @@ import Loader from "../components/loader";
 const Projects = () => {
   return (
     <div>
-    <BackToTop/>
-     <Suspense fallback={<div className='h-screen'> <Loader/></div> }>
+      <BackToTop />
+      <Suspense fallback={<div className='h-screen'> <Loader /></div>}>
         <Explore
           backgroundColor=""
           titleColor=""
           descriptionColor=""
           title="Case Studies"
           description="Explore how our innovative solutions have addressed unique challenges for our clients."
-          />
-
-      <ProjectCarousel bg_Color="white-A700" />
+        />
+        <ProjectCarousel bg_Color="white-A700" />
         <CardList />
         <ReadyToCollabrate />
-
-          </Suspense>
+      </Suspense>
 
     </div>
   );

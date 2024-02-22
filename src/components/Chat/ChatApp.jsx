@@ -3,8 +3,9 @@ import { BsChatQuote } from "react-icons/bs";
 import { AiOutlineSend } from "react-icons/ai";
 import TechrenderLogo from '../../assets/images/TR_logo.webp'
 import openai from 'openai'; 
+// import { config } from 'dotenv'
+// config()
 import axios from 'axios'
-
 
 function ChatApp() {
   const [messages, setMessages] = useState([]);
@@ -18,11 +19,10 @@ function ChatApp() {
   const [isVisible, setIsVisible] = useState(false);
   const [showButton, setShowButton] = useState(false);
 
-  openai.apiKey = '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'
+  // openai.apiKey =  process.env.VITE_APP_GPTAPIKEY
 //   useEffect(() => {
-//     // openai.apiKey = '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'
 //     // openai.configure({
-//     //     apiKey: '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'
+//     //     apiKey: process.env.VITE_APP_GPTAPIKEY
 //     //   });
 //   }, []);
 
@@ -58,7 +58,7 @@ function ChatApp() {
     if (openChat && messages.length === 0) {
       setMessages([
         ...messages,
-        { text: 'Welcome to Techrender!', sender: 'bot' }
+        { text: 'Welcome to Techrender! How can I help you.  ', sender: 'bot' }
       ]);
     }
   }, [openChat]);
@@ -67,6 +67,12 @@ function ChatApp() {
     setInputValue(e.target.value);
   };
 
+
+  const handleKeyDown = (event) => {
+    if (event.key === 'Enter') {
+      handleSendMessage();
+    }
+  }
 
   const handleSendMessage = async () => {
     if (!askForEmail) {
@@ -100,7 +106,8 @@ function ChatApp() {
       setAskForPhone(false);
       setMessages(prevMessages => [
         ...prevMessages,
-        { text: 'Thank you! We have received your information.', sender: 'bot' }
+        // { text: 'Thank you! We have received your information.', sender: 'bot' }
+        { text: 'We specialize in web and mobile app development, along with other digital services. Need a website, app, or other digital solutions? Just let us know how we can assist you today!', sender: 'bot' }
       ]);
     } else {
       if (inputValue.trim() !== '') {
@@ -109,19 +116,26 @@ function ChatApp() {
           { text: inputValue, sender: 'user' }
         ]);
         console.log(inputValue)
-          openai.Completion.create({
-            model: 'text-davinci-003',
-            messages: [{ role: "user", content: inputValue }],
-          }).then(response => {
-            console.log(response);
-            setMessages(prevMessages => [
-              ...prevMessages,
-              { text: response.data.choices[0].message.content, sender: 'bot' }
-            ]);
-          }).catch(error => {
-            console.error('Error with OpenAI API request:', error.message);
-          })
-        }
+          // openai.Completion.create({
+          //   model: 'text-davinci-003',
+          //   messages: [{ role: "user", content: inputValue }],
+          // }).then(response => {
+          //   console.log(response);
+          //   setMessages(prevMessages => [
+          //     ...prevMessages,
+          //     { text: response.data.choices[0].message.content, sender: 'bot' }
+          //   ]);
+          // }).
+          setTimeout(() => {
+          setMessages(prevMessages => [
+            ...prevMessages,
+            { text: 'Please Contact : 9743061810', sender: 'bot' }
+          ]);
+        }, 500)
+          // catch(error => {
+          //   console.error('Error with OpenAI API request:', error.message);
+          // })
+        }   
            setInputValue('');
       }
     }
@@ -162,6 +176,7 @@ function ChatApp() {
             <input
               type="text"
               placeholder="Type a message"
+              onKeyDown={handleKeyDown}
               value={inputValue}
               onChange={handleInputChange}
               className="w-full px-3 py-2 border rounded-l-full focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -182,6 +197,13 @@ function ChatApp() {
 export default ChatApp;
 
 
+
+
+
+
+
+
+
      // try {
         //     const response = await axios.post('https://api.openai.com/v1/completions', {    
         //       model: 'text-davinci-003', 
@@ -190,7 +212,7 @@ export default ChatApp;
         //     }, {
         //       headers: {
         //         'Content-Type': 'application/json',
-        //         'Authorization': `Bearer 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` 
+        //         'Authorization': `Bearer process.env.VITE_APP_GPTAPIKEY` 
         //       }
         //     });
         //     console.log(response)

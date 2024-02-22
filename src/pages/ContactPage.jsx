@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { BsArrowRightCircleFill } from "react-icons/bs";
 import emailjs from 'emailjs-com';
 import { toast } from 'react-toastify'
+import  Fade from "react-reveal/Fade";
 
 const ContactPage = () => {
     const [mail, setMail] = useState('');
@@ -57,11 +58,12 @@ const ContactPage = () => {
                 <div className="flex flex-col md:gap-10 gap-[120px] items-center justify-start lg:px-36 w-full">
                     <div className="flex flex-col font-exo md:gap-10 gap-16 items-center justify-start w-auto md:w-full">
                         <div className="flex flex-col md:gap-10 gap-16 items-center justify-start w-auto md:w-full">
+                        <Fade top distance='5%' duration={1000}>
                             <p
                                 className="mt-10 sm:mt-1 text-4xl sm:text-7xl  text-center text-gray-900 tracking-[-0.72px] w-auto font-exo font-extrabold"
                             >
                                 IT’S TIME TO CONNECT
-                            </p>
+                            </p> </Fade>
                             <div className="sm:mt-6 flex flex-col font-montserrat md:gap-10 gap-16 items-end justify-start w-auto md:w-full">
                                 <div className="flex flex-col md:gap-10 gap-16 items-start justify-start w-full">
 
@@ -125,6 +127,7 @@ const ContactPage = () => {
                         </div>
 
                         <div className="sticky top-0 bg-white-A700 border border-blue_gray-100 border-solid sm:flex-col font-montserrat md:gap-10 gap-[88px] md:h-auto items-start justify-start sm:px-5 px-8 py-9 mb-20 sm:mb-40 rounded-[16px] shadow-bs2 w-full">
+                        <Fade top distance='5%' duration={1000}>
                             <div className="sm:flex sm:flex-row gap-4 items-center justify-center w-full">
                                 <div className="flex flex-col gap-4 items-center justify-start w-auto sm:w-full">
                                     <p className="text-md lg:text-xl md:text-xl text-center text-gray-900_87 sm:text-xl w-auto font-montserrat font-semibold">PREFER TO TALK?</p>
@@ -139,7 +142,7 @@ const ContactPage = () => {
                                     <a href="https://wa.me/9743061810" class="text-lg lg:text-2xl sm:text-[23px] text-center text-gray-900 underline w-auto font-montserrat font-semibold" target="_blank">Whatsapp</a>
 
                                 </div>
-                            </div>
+                            </div> </Fade>
                         </div>
 
                     </div>

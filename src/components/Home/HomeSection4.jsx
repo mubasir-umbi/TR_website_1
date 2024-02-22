@@ -1,9 +1,11 @@
 import React from 'react';
+import  Fade from "react-reveal/Fade";
 
 function HomeSection4({ backgroundImage, imageUrl, title,firstHeading,secondHeading,firstDescription, secondDescription }) {
     return (
         <>
             <div className="py-20 sm:py-0 sm:h-screen  bg-cover bg-center flex items-center justify-center" style={{ backgroundImage: `url(${backgroundImage})` }}>
+            <Fade top distance='5%' duration={1000}>
               <div className='max-w-[1300px] mx-auto'>
                 <div className="max-w-6xl px-8 pt-10 flex flex-col sm:flex-row">               
                     <div className="w-full sm:w-1/2 pr-0 sm:pt-10 ">
@@ -36,7 +38,7 @@ function HomeSection4({ backgroundImage, imageUrl, title,firstHeading,secondHead
                     </div>
                 </div>
 
-            </div>
+            </div> </Fade>
         </div>
         </>
     )

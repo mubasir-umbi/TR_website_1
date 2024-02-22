@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import Explore from '../HeroSection/Explore';
+import  Fade from "react-reveal/Fade";
 
 const Card = ({ logoSrc, ImageSrc, description }) => {
     return (
         <>
+       <Fade top distance='5%' duration={1000}>
             <div className="flex flex-col lg:flex-row lg:justify-center lg:items-center mx-[26px] sm:mx-[93px] my-5">
                 {/* Right side image */}
                 <div className="m-2 md:order-last hover:scale-95 transition duration-500">
@@ -20,6 +22,7 @@ const Card = ({ logoSrc, ImageSrc, description }) => {
                     <p className="text-black-1000 md:text-lg font-montserrat tracking-wide">{description}</p>
                 </div>
             </div>
+        </Fade>
 
         </>
     );

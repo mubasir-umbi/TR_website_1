@@ -1,23 +1,19 @@
-
 import React from 'react'
-
-
+// import { Fade } from "react-awesome-reveal";
+import  Fade from "react-reveal/Fade";
 import LetsChatSection from "../../components/LetsChatSection";
 import SectionOne from "../../components/projectDetails/SectionOne";
 import SectionTwo from "../../components/projectDetails/SectionTwo";
 import ProjectDetailsSection from "../../components/projectDetails/ProjectDetailsSection";
 import KeyFeturesSection from "../../components/projectDetails/KeyFeturesSection";
-
-
+import HaveProjForUs from '../../components/projectDetails/HaveProjForUs';
+import BackToTop from '../../components/BackToTop';
 import dmct_img_0 from '../../assets/images/dmct_img_0.webp'
 import dmct_img_1 from '../../assets/images/dmct_img_1.webp'
 import dmct_img_2 from '../../assets/images/dmct_img_2.webp'
 import dmct_img_3 from '../../assets/images/dmct_img_3.1.webp'
 import dmct_img_4 from '../../assets/images/dmct_img_4.webp'
 import dmct_img_5 from '../../assets/images/dmct_img_5.webp'
-
-import HaveProjForUs from '../../components/projectDetails/HaveProjForUs';
-import BackToTop from '../../components/BackToTop';
 
 
 const text1 = `DataMapers Group sought to provide an advanced, self-hosted
@@ -80,6 +76,7 @@ const Dmct = () => {
         <div className="flex flex-col md:gap-10 gap-16 items-center justify-start w-full">
           <div className="flex flex-col w-full">
           <BackToTop/>
+          <Fade top distance='5%' duration={1000}>
             <SectionOne 
                  name = {dmct_img_0 } 
                  text = {text1} 
@@ -123,7 +120,8 @@ const Dmct = () => {
                  img = {dmct_img_5}
                  color = {color}
                  text = {''}
-             />
+                 />
+                 </Fade>
                         
           </div>
         </div>

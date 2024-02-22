@@ -14,7 +14,7 @@ const AboutUs = () => {
   return (
     <>
     <BackToTop/>
-    <Suspense fallback={<div className='h-screen'> <Loader/></div> }>
+    <Suspense fallback={<div className='h-screen'> <Loader/></div> }>  
       <BuiltFor />
       <WhatWeDo />
       <SuccessFull />

@@ -1,9 +1,12 @@
 import React from 'react'
+// import { Fade } from "react-awesome-reveal";
+import  Fade from "react-reveal/Fade";
 import LetsChatSection from "../../components/LetsChatSection";
 import SectionOne from "../../components/projectDetails/SectionOne";
 import SectionTwo from "../../components/projectDetails/SectionTwo";
 import ProjectDetailsSection from "../../components/projectDetails/ProjectDetailsSection";
 import KeyFeturesSection from "../../components/projectDetails/KeyFeturesSection";
+import HaveProjForUs from '../../components/projectDetails/HaveProjForUs';
 import BackToTop from '../../components/BackToTop';
 
 import SnaptrackHeading from '../../assets/images/SnaptrackHeading.webp'
@@ -12,7 +15,6 @@ import img_group2301911 from '../../assets/images/img_group2301911.webp'
 import Group_230192 from '../../assets/images/Group 230192.webp'
 import snaptrac_img_1 from '../../assets/images/snaptrac_img_1.webp'
 
-import HaveProjForUs from '../../components/projectDetails/HaveProjForUs';
 
 const txt = `A Software as a Service (SAAS) attendance and payroll
 solution, functioning akin to a digital HR assistant,
@@ -67,12 +69,14 @@ const SnapTrack = () => {
           <div className="flex flex-col md:gap-10 gap-16 items-center justify-start w-full">
             <div className="flex flex-col w-full">
               <BackToTop />
+              <Fade top distance='5%' duration={1000}>
+
               <SectionOne
                 h='h-16'
                 name={SnaptrackHeading}
                 text={txt}
                 image={handMockup}
-              />
+                />
 
               <SectionTwo
                 datas={datas}
@@ -99,6 +103,7 @@ const SnapTrack = () => {
                 img={Group_230192}
                 color={color}
               />
+                </Fade>
             </div>
           </div>
         </div>

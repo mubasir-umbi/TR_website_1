@@ -1,6 +1,6 @@
 import React from 'react'
 import LetsTalk from '../buttons/LetsTalk'
-
+import  Fade from "react-reveal/Fade";
 
 const HaveProjForUs = () => {
   return (
@@ -14,7 +14,7 @@ const HaveProjForUs = () => {
 
           }}
         ></div>
-
+  <Fade top distance='5%' duration={1000}>
         <div className="relative z-10">
           <div className="fontExo text-center font-extrabold text-2xl md:text-[64px] leading-[2.5rem] md:leading-[89.6px] tracking-[-1%] text-white-A700">
             Have a project for us?
@@ -32,6 +32,7 @@ const HaveProjForUs = () => {
             <LetsTalk />
           </div>
         </div>
+        </Fade>
       </div>
       </div>
 

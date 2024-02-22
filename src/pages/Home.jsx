@@ -5,6 +5,7 @@ import Loader from '../components/loader';
 import Chatbox from '../components/Chat/ChatBox';
 import ChatApp from '../components/Chat/ChatApp';
 import CarouselControlsOutside from '../components/Carousal';
+import  Fade from "react-reveal/Fade";
 const LazyHeroOne = React.lazy(() => import('../components/HeroSection/SectionOne'));
 const LazyProjectCarousel = React.lazy(() => import('../components/HeroSection/ProjectCarousel'));
 const LazyHomeSection1 = React.lazy(() => import('../components/Home/HomeSection1'));
@@ -24,7 +25,6 @@ const Home = () => {
       <ChatApp />
       <Suspense fallback={<div className='h-screen'> <Loader /></div>}>
         <LazyHeroOne />
-
         <LazyExplore
           backgroundColor="gray-900"
           titleColor="blue-400"
@@ -39,8 +39,9 @@ const Home = () => {
 
         <LazyHomeSection1 />
         <LazyHomeSection2 />
+        <Fade top distance='5%' duration={1000}>
         <LazyHomeSection3 />
-
+        </Fade>
         <div className="carousel-container">
           <LazyTestimonyCarousel users={usersResponse} />
         </div>
@@ -82,7 +83,7 @@ const Home = () => {
           </div>
         </div>
         <LazyDontLet />
-
+        
       </Suspense>
     </div>
   );

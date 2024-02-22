@@ -1,5 +1,6 @@
 import React from 'react'
 import ContatctUsBtn from './buttons/ContactUsBtn'
+import  Fade from "react-reveal/Fade";
 
 function DontLet() {
     return (
@@ -13,8 +14,9 @@ function DontLet() {
                     }}
                     // opacity: 0.5
                 ></div>
-
+ 
                 <div className="relative z-10">
+                <Fade top distance='5%' duration={1000}>
                     <div className="fontExo text-center font-extrabold text-3xl md:text-[72px] leading-[2.5rem] md:leading-[89.6px] tracking-[-1%] text-white-A700">
                         Don’t Let Your Idea <br/> Stay a Dream.
                     </div>
@@ -22,7 +24,7 @@ function DontLet() {
                     <div className="fontMontserrat text-gray-500 text-center text-xs md:text-[24px] font-normal leading-5 md:leading-[38.4px] tracking-wide mt-7">
                         Drop us a line to know how technology and <br /> design will impact your business.
                     </div>
-
+                    </Fade>
                     <div className="flex flex-row items-center justify-center mt-7">
                         {/* <button className="relative inline-flex items-center fontMontserrat px-4 py-2 font-bold text-base md:my-1 md:px-7  md:py-3 md:font-bold md:text-xl md:leading-normal leading-trim text-white-A700 uppercase tracking-wide bg-deep_purple-800 rounded-full shadow-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-blue-200 mb-4 md:mb-0 md:mr-4">
                             contact us

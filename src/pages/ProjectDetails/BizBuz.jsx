@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
-
+// import { Fade } from "react-awesome-reveal";
+import  Fade from "react-reveal/Fade";
 import LetsChatSection from "../../components/LetsChatSection";
 import SectionOne from "../../components/projectDetails/SectionOne";
 import SectionTwo from "../../components/projectDetails/SectionTwo";
@@ -80,6 +81,8 @@ const BizBuz = () => {
         <div className="flex flex-col md:gap-10 gap-16 items-center justify-start w-full">
           <div className="flex flex-col w-full">
           <BackToTop/>
+          <Fade top distance='5%' duration={1000}>
+
             <SectionOne 
                  name = {buz_buz_img_0} 
                  text = {text1} 
@@ -116,13 +119,14 @@ const BizBuz = () => {
                  align = 'items-start'
                  color = {'text-indigo-A200'}
                  text = {''}
-            />
+                 />
 
             <KeyFeturesSection 
                  img = {buz_buz_img_5}
                  color = {'text-indigo-A200'}
                  text = {key_fet}
-             />     
+                 />     
+                 </Fade>
           </div>
         </div>
       </div>

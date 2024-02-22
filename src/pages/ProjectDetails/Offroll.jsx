@@ -1,4 +1,6 @@
 import React from "react";
+// import { Fade } from "react-awesome-reveal";
+import  Fade from "react-reveal/Fade";
 import SectionOne from "../../components/projectDetails/SectionOne";
 import SectionTwo from "../../components/projectDetails/SectionTwo";
 import ProjectDetailsSection from "../../components/projectDetails/ProjectDetailsSection";
@@ -76,11 +78,13 @@ const Offroll = () => {
         <div className="flex flex-col md:gap-10 gap-16 items-center justify-start w-full">
           <div className="flex flex-col w-full">
           <BackToTop/>
+          <Fade top distance='5%' duration={1000}>
+
             <SectionOne 
                  name = {offrollsHeading} 
                  text = {text} 
                  image = {offroll_img_1} 
-            />
+                 />
 
             <SectionTwo 
                  datas= {datas} 
@@ -111,14 +115,15 @@ const Offroll = () => {
                  align = 'items-start'
                  color = {color}
                  text = {''}
-            />
+                 />
 
             <KeyFeturesSection 
                  img = {offroll_key_f_img}
                  color = {color}
                  text = {key_fet}
-             />
+                 />
             
+                 </Fade>
           </div>
         </div>
       </div>

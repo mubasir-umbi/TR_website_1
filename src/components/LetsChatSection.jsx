@@ -1,8 +1,8 @@
 import React from 'react'
-
 import img_group1 from '../assets/images/img_group1.png'
 import LetsChatBtn from './LetsChatBtn'
 import LetsTalk from './buttons/LetsTalk'
+import  Fade from "react-reveal/Fade";
 
 
 const LetsChatSection = () => {
@@ -19,6 +19,7 @@ const LetsChatSection = () => {
                         <div className="flex md:flex-col flex-row md:gap-[54px] items-start justify-between mr-[19px] w-[98%] md:w-full">
                             <div className="bg-opacity-5 h-[71px] md:mt-0 mt-[345px] w-[11%] md:hidden"></div>
                             <div className="flex flex-col gap-[46px] items-center justify-start md:mb-0 mb-[59px] w-auto md:w-full">
+                            <Fade top distance='5%' duration={1000}>
                                 <div className="flex flex-col gap-4 items-center justify-start w-auto sm:w-full">
                                     <p className="sm:leading-[160.00%] sm:text-6xl text-[64px] text-center text-white-A700 tracking-[-0.64px] font-exo font-extrabold">
                                         <>
@@ -32,7 +33,7 @@ const LetsChatSection = () => {
                                         Drop us a line to Know how technology and design will
                                         impact your business.
                                     </p>
-                                </div>
+                                </div> </Fade>
                                 <div className="flex flex-col items-center justify-start w-auto">
 
                                     <LetsTalk />

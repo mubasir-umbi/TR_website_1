@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { Link } from 'react-router-dom';
+import  Fade from "react-reveal/Fade";
+import MoreProjects from '../buttons/MoreProjects';
 
 import SnapCardImage from '../../assets/images/SnaptrackImgSide.webp'
 import DoubleMobile from '../../assets/images/DoubleMobile.webp'
@@ -12,7 +14,6 @@ import Img_Dmtc from '../../assets/images/img-Dmtc.png'
 import Img_Dmtc_hover from '../../assets/images/dmtc_full.png'
 // import MoreProjectImage from '../../assets/images/moreprojects.webp'
 import MoreProjectImage from '/images/Moreprojectcard.png'
-import MoreProjects from '../buttons/MoreProjects';
 
 
 function ProjectCarousel({ bg_Color }) {
@@ -108,9 +109,13 @@ function ProjectCarousel({ bg_Color }) {
         }
     };
     return (
-        <div className={`bg-${bg_Color} sm:py-10`}>
+        // <div className={`bg-${bg_Color} sm:py-10`}>
+              <div className={`bg-${bg_Color} sm:pt-10 sm:pb-2
+              `}>
             <div className='max-w-[1300px] mx-auto'>
+            <Fade top distance='5%' duration={1000}>
                 <Carousel responsive={responsive} className='pt-8 mx-4 sm:mx-16 sm:pb-20'>
+              
                     {carouselItems.map((item, index) => (
 
                         <Link to={item.to} key={item.id} className="cursor-pointer">
@@ -141,9 +146,28 @@ function ProjectCarousel({ bg_Color }) {
                                     </div>
                                 </div>
                             </div>
-                        </Link>
+                        </Link>                    
 
-                        // <Link to={item.to} key={item.id} className="cursor-pointer">
+                    ))}
+                    <Link to={'/projects'} className="relative inline-block sm:m-4">
+                        <img className='h-[500px] w-[364px] m-2 hover:scale-95 rounded-3xl transition duration-500  shadow-xl shadow-blue-800' src={MoreProjectImage} alt="moreProjects" />
+                        <div className="absolute inset-0 flex items-center justify-center">
+                            <MoreProjects />
+                        </div>
+                    </Link>
+
+
+                </Carousel>
+                </Fade>
+            </div>
+        </div>
+    );
+}
+
+export default ProjectCarousel;
+
+
+ // <Link to={item.to} key={item.id} className="cursor-pointer">
                         //     <div className='flex'>
                         //         <div
                         //             className={`relative h-[500px] w-[364px] md:w-[364px] sm:h-[500px] sm:m-4 rounded-3xl `}
@@ -172,23 +196,3 @@ function ProjectCarousel({ bg_Color }) {
                         //         </div>
                         //     </div>
                         // </Link>
-
-
-                    ))}
-                    <Link to={'/projects'} className="relative inline-block sm:m-4">
-                        <img className='h-[500px] w-[364px] m-2 hover:scale-95 rounded-3xl transition duration-500  shadow-xl shadow-blue-800' src={MoreProjectImage} alt="moreProjects" />
-                        <div className="absolute inset-0 flex items-center justify-center">
-                            <MoreProjects />
-                        </div>
-                    </Link>
-
-
-                </Carousel>
-
-            </div>
-        </div>
-    );
-}
-
-export default ProjectCarousel;
-
