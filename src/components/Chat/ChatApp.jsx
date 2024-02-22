@@ -150,7 +150,7 @@ function ChatApp() {
           <BsChatQuote  style={{ fontSize: "2rem" }}  />
         </button>
       )}
-      <div className={`fixed bottom-16 right-4 w-auto sm:w-96 ${openChat ? 'transition duration-500 ' : 'hidden'}`}>
+      <div className={`fixed bottom-16 right-4 ml-2 w-auto sm:w-96 ${openChat ? 'transition duration-500 ' : 'hidden'}`}>
         <div className="bg-white-A700 shadow-xl rounded-lg max-w-lg w-full">
           {/* <div className="p-4 border-b bg-deep_purple-800 text-white-A700 rounded-t-lg flex justify-between items-center"> */}
             {/* <p className="text-white-A700 text-lg font-semibold">Techrender</p> */}

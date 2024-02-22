@@ -36,10 +36,6 @@ const HaveProjForUs = () => {
       </div>
       </div>
 
-    
-
-
-
     </>
   )
 }

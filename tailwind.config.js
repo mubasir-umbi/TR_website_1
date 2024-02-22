@@ -179,6 +179,10 @@ export default {
         bs4: "-8px 12px  32px 0px #1100ff1e",
         bs7: "0px -16px  250px 0px #0000000f",
       },
+      transitionDuration: {
+        'slow': '1s', // You can adjust the value to make it slower
+        'very-slow': '4s', // Adjust this as per your need
+      },
     },
   },
   // plugins: [require("@tailwindcss/forms")],
