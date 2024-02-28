@@ -29,6 +29,7 @@ const SiteRoutes = () => {
           <Route path="/#services" element={<Home />} />
           <Route path="*" element={<><Header /><PageNotFound /> <Footer /></>} />
           <Route path="/contact_us" element={<><Header /><ContactPage /></>} />
+          {/* <Route path="/schedule" element={<><ScheduleCall /></>} /> */}
         </Routes> 
       </Router>
     </React.Suspense>

@@ -70,6 +70,7 @@ export default {
           700: "#606060",
           800: "#6c260d",
           900: "#0d0a26",
+          1001:'#dad3cc',
           "50_01": "#f9faff",
           "50_02": "#faf7ff",
           "900_99": "#21272d99",
@@ -88,6 +89,7 @@ export default {
           "900_87": "#0d0a2687",
           "900_00": "#22272d00",
           "900_01": "#171718",
+          
         },
         indigo: {
           '111': '#00AFF0',
@@ -176,6 +178,10 @@ export default {
         bs6: "-8px 12px  32px 0px #0091ff1e",
         bs4: "-8px 12px  32px 0px #1100ff1e",
         bs7: "0px -16px  250px 0px #0000000f",
+      },
+      transitionDuration: {
+        'slow': '1s', // You can adjust the value to make it slower
+        'very-slow': '4s', // Adjust this as per your need
       },
     },
   },

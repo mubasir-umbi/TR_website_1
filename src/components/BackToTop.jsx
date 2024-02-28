@@ -33,13 +33,20 @@ const BackToTop = () => {
       {isVisible && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-10 right-5 bg-gray-500 text-white p-4 rounded-full shadow-md hover:bg-gray-600  focus:outline-none focus:bg-gray-600"       
+          // className="fixed bottom-4 right-5 bg-gray-500 text-white p-3 rounded-full shadow-md hover:bg-gray-600  focus:outline-none focus:bg-gray-600"       
+          className="fixed bottom-4 right-5 bg-gray-200 text-white p-3 rounded-full shadow-md hover:bg-deep_purple-800 hover:text-white-A700 focus:outline-none focus:bg-gray-600"       
+         
           style={{ zIndex: 9999 }}
        >
           <HiArrowUp size={24} />
         </button>
       )}
     </div>
+  );
+};
+
+export default BackToTop;
+
 
 
 //     <div
@@ -58,12 +65,6 @@ const BackToTop = () => {
 //       <HiArrowUp size={24} />
 //     </button>
 //   </div>
-  );
-};
-
-export default BackToTop;
-
-
 
 {/* <div className='flex justify-center items-center h-screen'>
 <button

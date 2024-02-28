@@ -1,6 +1,6 @@
 import React, {Suspense } from 'react';
 import BackToTop from '../components/BackToTop';
-import Loader from '../components/loader';
+import Loader from '../components/Loader';
 const BuiltFor = React.lazy(() => import('../components/AboutUs/BuilFor'));
 const WhatWeDo = React.lazy(() => import('../components/AboutUs/WhatWeDo'));
 const SuccessFull = React.lazy(() => import('../components/AboutUs/SuccessFull'));
@@ -14,7 +14,7 @@ const AboutUs = () => {
   return (
     <>
     <BackToTop/>
-    <Suspense fallback={<div className='h-screen'><Loader/></div>}>
+    <Suspense fallback={<div className='h-screen'> <Loader/></div> }>  
       <BuiltFor />
       <WhatWeDo />
       <SuccessFull />

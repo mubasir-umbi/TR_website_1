@@ -1,24 +1,19 @@
-
 import React from 'react'
-
-
+// import { Fade } from "react-awesome-reveal";
+import Fade from "react-reveal/Fade";
 import LetsChatSection from "../../components/LetsChatSection";
 import SectionOne from "../../components/projectDetails/SectionOne";
 import SectionTwo from "../../components/projectDetails/SectionTwo";
 import ProjectDetailsSection from "../../components/projectDetails/ProjectDetailsSection";
 import KeyFeturesSection from "../../components/projectDetails/KeyFeturesSection";
-
-
-import dmct_img_0 from '../../assets/images/dmct_img_0.png'
-import dmct_img_1 from '../../assets/images/dmct_img_1.png'
-import dmct_img_2 from '../../assets/images/dmct_img_2.png'
-import dmct_img_3 from '../../assets/images/dmct_img_3.png'
-import dmct_img_3_1 from '../../assets/images/dmct_img_3.1.png'
-import dmct_img_4 from '../../assets/images/dmct_img_4.png'
-import dmct_img_5 from '../../assets/images/dmct_img_5.png'
-
 import HaveProjForUs from '../../components/projectDetails/HaveProjForUs';
 import BackToTop from '../../components/BackToTop';
+import dmct_img_0 from '../../assets/images/dmct_img_0.webp'
+import dmct_img_1 from '../../assets/images/dmct_img_1.webp'
+import dmct_img_2 from '../../assets/images/dmct_img_2.webp'
+import dmct_img_3 from '../../assets/images/dmct_img_3.1.webp'
+import dmct_img_4 from '../../assets/images/dmct_img_4.webp'
+import dmct_img_5 from '../../assets/images/dmct_img_5.webp'
 
 
 const text1 = `DataMapers Group sought to provide an advanced, self-hosted
@@ -44,28 +39,28 @@ simplifies email marketing.`
 
 const datas = [
   {
-      name1: 'DataMapers Group',
-      name2: '',
-      text: 'CLIENT',
-      pClass: 'leading-[140.00%] max-w-[180px] md:max-w-full text-2xl md:text-[22px] text-gray-900 sm:text-xl font-bold font-montserrat'
+    name1: 'DataMapers Group',
+    name2: '',
+    text: 'CLIENT',
+    pClass: 'leading-[140.00%] max-w-[180px] md:max-w-full text-2xl md:text-[22px] text-gray-900 sm:text-xl font-bold font-montserrat'
   },
   {
-      name1: 'Philadelphia, USA',
-      name2: '',
-      text: 'LOCATION',
-      pClass: 'text-2xl md:text-[22px] text-gray-900 sm:text-xl w-auto font-bold font-montserrat'
+    name1: 'Philadelphia, USA',
+    name2: '',
+    text: 'LOCATION',
+    pClass: 'text-2xl md:text-[22px] text-gray-900 sm:text-xl w-auto font-bold font-montserrat'
   },
   {
-      name1: 'Web App',
-      name2: '',
-      text: 'Deliverables',
-      pClass: 'leading-[140.00%] max-w-[180px] md:max-w-full text-2xl md:text-[22px] text-gray-900 sm:text-xl font-bold font-montserrat'
+    name1: 'Web App',
+    name2: '',
+    text: 'Deliverables',
+    pClass: 'leading-[140.00%] max-w-[180px] md:max-w-full text-2xl md:text-[22px] text-gray-900 sm:text-xl font-bold font-montserrat'
   },
   {
-      name1: 'Web',
-      name2: '',
-      text: 'PLATFORMS',
-      pClass: 'text-2xl md:text-[22px] text-gray-900 sm:text-xl w-auto font-bold font-montserrat'
+    name1: 'Web',
+    name2: '',
+    text: 'PLATFORMS',
+    pClass: 'text-2xl md:text-[22px] text-gray-900 sm:text-xl w-auto font-bold font-montserrat'
   },
 ]
 
@@ -77,61 +72,63 @@ const Dmct = () => {
   return (
     <>
       <div className='max-w-[1300px] mx-auto'>
-      <div className="bg-white-A700 flex flex-col font-montserrat items-center justify-end mx-auto pt-12">
-        <div className="flex flex-col md:gap-10 gap-16 items-center justify-start w-full">
-          <div className="flex flex-col w-full">
-          <BackToTop/>
-            <SectionOne 
-                 name = {dmct_img_0 } 
-                 text = {text1} 
-                 image = {dmct_img_1}
-                 h='h-14' 
-            />
+        <div className="bg-white-A700 flex flex-col font-montserrat items-center justify-end mx-auto pt-12">
+          <div className="flex flex-col md:gap-10 gap-16 items-center justify-start w-full">
+            <div className="flex flex-col w-full">
+              <BackToTop />
+              <Fade top distance='5%' duration={1000}>
+                <SectionOne
+                  name={dmct_img_0}
+                  text={text1}
+                  image={dmct_img_1}
+                  h='h-14'
+                />
 
-            <SectionTwo 
-                 datas= {datas} 
-            />
+                <SectionTwo
+                  datas={datas}
+                />
 
-            <ProjectDetailsSection
-                 head1 = 'Understanding'
-                 head2 = 'The Problem' 
-                 img = {dmct_img_2}
-                 align = 'items-start'
-                 color = {color}
-                 text = {detText1}
-            />
+                <ProjectDetailsSection
+                  head1='Understanding'
+                  head2='The Problem'
+                  img={dmct_img_2}
+                  align='items-start'
+                  color={color}
+                  text={detText1}
+                />
 
-            <ProjectDetailsSection
-                 head1 = 'A new solution'
-                 head2 = 'That people love' 
-                 img = {dmct_img_3_1}
-                 align = 'items-end'
-                 color = {color}
-                 text = {detText2}
-            />
+                <ProjectDetailsSection
+                  head1='A new solution'
+                  head2='That people love'
+                  img={dmct_img_3}
+                  align='items-end'
+                  color={color}
+                  text={detText2}
+                />
 
-            <ProjectDetailsSection
-                 head1 = 'Rewards'
-                 head2 = 'Screens' 
-                 img = {dmct_img_4}
-                 align = 'items-start'
-                 color = {color}
-                 text = {''}
-            />
+                <ProjectDetailsSection
+                  head1='Rewards'
+                  head2='Screens'
+                  img={dmct_img_4}
+                  align='items-start'
+                  color={color}
+                  text={''}
+                />
 
 
-            <KeyFeturesSection 
-                 img = {dmct_img_5}
-                 color = {color}
-                 text = {''}
-             />
-                        
+                <KeyFeturesSection
+                  img={dmct_img_5}
+                  color={color}
+                  text={''}
+                />
+              </Fade>
+
+            </div>
           </div>
         </div>
-        </div>
       </div>
-      <HaveProjForUs/>
-      
+      <HaveProjForUs />
+
     </>
   )
 }

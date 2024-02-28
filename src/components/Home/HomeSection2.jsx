@@ -1,13 +1,14 @@
 import React, { useRef } from "react";
-
+import  Fade from "react-reveal/Fade";
+// import { Fade } from "react-awesome-reveal";
 import DepSectionCard from "../DepSectionCard";
-import dep_card_img_1 from "../../assets/images/dep_card_img_1.png";
-import dep_card_img_2 from "../../assets/images/dep_card_img_2.png";
-import dep_card_img_3 from "../../assets/images/dep_card_img_3.png";
-import dep_card_img_4 from "../../assets/images/dep_card_img_4.png";
-import dep_card_img_5 from "../../assets/images/dep_card_img_5.png";
-import dep_card_img_6 from "../../assets/images/dep_card_img_6.png";
-import dep_card_img_7 from "../../assets/images/dep_card_img_7.png";
+import dep_card_img_1 from "../../assets/images/dep_card_img_1.webp";
+import dep_card_img_2 from "../../assets/images/dep_card_img_2.webp";
+import dep_card_img_3 from "../../assets/images/dep_card_img_3.webp";
+import dep_card_img_4 from "../../assets/images/dep_card_img_4.webp";
+import dep_card_img_5 from "../../assets/images/dep_card_img_5.webp";
+import dep_card_img_6 from "../../assets/images/dep_card_img_6.webp";
+import dep_card_img_7 from "../../assets/images/dep_card_img_7.webp";
 import { dep1Btn, dep2Btn, dep3Btn, dep4Btn, dep5Btn, dep6Btn, dep7Btn } from "../../constants/depBtnData";
 
 const btBg1 = 'bg-gray-900_04 text-white-A700'
@@ -25,6 +26,7 @@ const HomeSection2 = () => {
                 >
                     <div className="flex flex-col items-start justify-end px-4 sm:px-8 w-full pb-24">
                         <div className="flex flex-col font-montserrat items-start justify-start mb-1 mt-[30px] mx-auto w-full">
+                        <Fade top distance='5%' duration={1000}>
                             <div className='pt-10 md:pt-20'>
                                 <div className={`fontExo text-left font-extrabold text-4xl md:text-[64px] md:leading-[89.6px] tracking-[-1%] bg-gradient-to-r from-white-A700 to-blue-600 bg-clip-text text-transparent text-gray-900`}>
                                     So How We Can Help?
@@ -33,7 +35,7 @@ const HomeSection2 = () => {
                                     It&#39;s not about limitations, but it&#39;s something
                                     we focus on.
                                 </div>
-                            </div>
+                            </div> </Fade>
 
 
                             <div className="relative" id="services">
@@ -120,7 +122,6 @@ const HomeSection2 = () => {
                                         btn={dep7Btn}
                                         btnBg={btBg1}
                                     />
-
                                 </div></div>
                         </div>
                     </div>

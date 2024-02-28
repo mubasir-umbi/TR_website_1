@@ -1,10 +1,11 @@
 import React, { useRef, useState,useEffect } from 'react';
-import logo from "../assets/TR_logo.png";
+import logo from "../assets/images/TR_logo.webp";
 import { CgMenuRound, CgCloseO } from "react-icons/cg";
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const Location = useLocation()
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -16,7 +17,7 @@ function Navbar() {
       if (target) {
         window.scrollTo({
           top: target.offsetTop,
-          behavior: 'smooth'
+          behavior: 'smooth',      
         });
       }
     };
@@ -25,7 +26,6 @@ function Navbar() {
     if (servicesLink) {
       servicesLink.addEventListener('click', smoothScroll);
     }
-
     return () => {
       if (servicesLink) {
         servicesLink.removeEventListener('click', smoothScroll);
@@ -35,7 +35,8 @@ function Navbar() {
 
   return (
 
-    <nav className="bg-white-A700 py-2 sm:py-4 border-b-2 shadow-bs ">
+    // style={{ position: 'fixed', top: 0, left: 0, width: '100%', zIndex: 100, backgroundColor: 'white' }}
+    <nav  className=" bg-white-A700 py-2 sm:py-4 border-b-2 shadow-bs ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 ">
         <Link to={'/'}  className="flex-shrink-0">
@@ -54,9 +55,16 @@ function Navbar() {
           </div>
           <div className="hidden lg:block">
             <div className="ml-10 flex items-baseline space-x-4">
-           <Link to={'/about_us'}  className="text-gray-900 hover:text-deep_purple-800 px-4 py-2 rounded-full uppercase font-medium font-montserrat text-xl tracking-[-0.60px]">ABOUT US </Link> 
+           {/* <Link to={'/about_us'}  className="text-gray-900 hover:text-deep_purple-800 px-4 py-2 rounded-full uppercase font-medium font-montserrat text-xl tracking-[-0.60px]">ABOUT US </Link> 
             <a href='#services'  className="text-gray-900 hover:text-deep_purple-800  px-4 py-2 rounded-full uppercase font-medium font-montserrat text-xl tracking-[-0.60px]">SERVICES </a> 
             <Link to={'/projects'}  className="text-gray-900 hover:text-deep_purple-800  px-4 py-2 rounded-full uppercase font-medium font-montserrat text-xl tracking-[-0.60px]">PROJECTS </Link> 
+            */}
+              <Link to={'/about_us'} className={`text-gray-900  hover:text-deep_purple-800 px-4 py-2 rounded-full uppercase font-medium font-montserrat text-xl tracking-[-0.60px] ${Location.pathname == "/about_us" ? "text-indigo-600" : "text-brand-darkblue"}`}
+              >ABOUT US </Link>
+              <a href='#services' className={`text-gray-900  hover:text-deep_purple-800 px-4 py-2 rounded-full uppercase font-medium font-montserrat text-xl tracking-[-0.60px] ${Location.pathname == "/#services" ? "text-indigo-600" : "text-brand-darkblue"}`}
+              >SERVICES </a>
+
+              <Link to={'/projects'} className={`text-gray-900  hover:text-deep_purple-800 px-4 py-2 rounded-full uppercase font-medium font-montserrat text-xl tracking-[-0.60px] ${Location.pathname == "/projects" ? "text-indigo-600" : "text-brand-darkblue"}`}>PROJECTS </Link>
             </div>
           </div>
 

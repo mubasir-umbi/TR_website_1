@@ -76,7 +76,7 @@ const FooterNew = () => {
                 <span className="ml-2  font-medium font-montserrat leading-8 tracking-[0.03em]">Instagram</span>
               </a>
 
-              <Link to={'https://www.linkedin.com/company/tech-render/'} className="flex items-center text-gray-900 hover:text-gray-700">
+              <Link to={'https://www.linkedin.com/company/tech-render/'} target='_blank' className="flex items-center text-gray-900 hover:text-gray-700">
                 <span className="sr-only">Linkedin</span>
                 <svg fill="currentColor" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="0" className="w-6 h-6" viewBox="0 0 24 24">
                   <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>

@@ -1,24 +1,18 @@
 import React from 'react'
-
-import logo1 from '../../assets/images/offroll_logo.svg'
-import logo_1_akessia from '../../assets/images/logo_1_akessia.png'
-import logo_1_bizbuz from '../../assets/images/logo_1_bizbuz.png'
-import logo_1_dm from '../../assets/images/logo_1_dm.png'
-import logo_1_gc from '../../assets/images/EcDealsLogonewEdit.png'
-import logo_1_la from '../../assets/images/logo_1_la.png'
-import logo_1_norq from '../../assets/images/logo_1_norq.png'
-import logo_1_siloplus from '../../assets/images/logo_1_siloplus.png'
-import logo_1_smarttech from '../../assets/images/logo_1_smarttech.png'
-import logo_1_wonderla from '../../assets/images/logo_1_wonderla.png'
-import logo_1_ofroll from '../../assets/images/logo_1_ofroll.png'
-import arrowL from '../../assets/images/arro_left.svg'
-import dhanush_img from '../../assets/images/dhanush_img.png'
+import logo_1_ofroll from '../../assets/images/logo_1_ofroll.webp'
+import logo_1_siloplus from '../../assets/images/logo_1_siloplus.webp'
+import logo_1_wonderla from '../../assets/images/logo_1_wonderla.webp'
+import logo_1_norq from '../../assets/images/logo_1_norq.webp'
+import logo_1_la from '../../assets/images/logo_1_la.webp'
+import logo_1_akessia from '../../assets/images/logo_1_akessia.webp'
+import logo_1_bizbuz from '../../assets/images/logo_1_bizbuz.webp'
+import logo_1_dmtc from '../../assets/images/logo_1_dmtc.webp'
+import logo_1_smarttech from '../../assets/images/logo_1_smarttech.webp'
+import logo_1_gc from '../../assets/images/EcDealsLogonewEdit.webp'
 import img_image112 from '../../assets/images/img_image112.png'
-import datamappersLogo from '../../assets/images/datmapper.jpg'
 
 
 const HomeSection3 = () => {
-
     const logos = [
         { src: logo_1_ofroll, alt: 'logo1' },
         { src: logo_1_siloplus, alt: 'logo2' },
@@ -27,7 +21,7 @@ const HomeSection3 = () => {
         { src: logo_1_la, alt: 'image1605' },
         { src: logo_1_akessia, alt: 'image1604' },
         { src: logo_1_bizbuz, alt: 'logoOne' },
-        { src: datamappersLogo, alt: 'logo8' },
+        { src: logo_1_dmtc, alt: 'logo8' },
         { src: logo_1_smarttech, alt: 'logo9' },
         { src: logo_1_gc, alt: 'logo10' }
     ];
@@ -46,7 +40,7 @@ const HomeSection3 = () => {
                                         Happy clients
                                     </div>
                                     <p
-                                        className="mt-3 text-lg md:text-[24px] text-left text-gray-900 sm:text-xl tracking-[-0.72px] w-auto font-montserrat font-normal"
+                                        className="mt-4 text-lg md:text-[24px] text-left text-gray-900 sm:text-xl tracking-[-0.72px] w-auto font-montserrat font-normal"
                                     >
                                         Hear from the decision makers themselves!
                                     </p>
@@ -62,8 +56,7 @@ const HomeSection3 = () => {
                                     </div>
                                 </div>
                             </div>
-
-                          
+                  
 
                             <div className="flex flex-col gap-6 items-center justify-start w-full md:w-full bs2  mt-0 sm:mt-16">
                                 <div className="flex flex-col items-center justify-start sm:w-24 w-12 ">
