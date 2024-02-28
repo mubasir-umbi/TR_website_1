@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import  Fade from "react-reveal/Fade";
+// import { Fade } from "react-awesome-reveal";
 import DepSectionCard from "../DepSectionCard";
 import dep_card_img_1 from "../../assets/images/dep_card_img_1.webp";
 import dep_card_img_2 from "../../assets/images/dep_card_img_2.webp";

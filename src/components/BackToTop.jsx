@@ -42,6 +42,11 @@ const BackToTop = () => {
         </button>
       )}
     </div>
+  );
+};
+
+export default BackToTop;
+
 
 
 //     <div
@@ -60,12 +65,6 @@ const BackToTop = () => {
 //       <HiArrowUp size={24} />
 //     </button>
 //   </div>
-  );
-};
-
-export default BackToTop;
-
-
 
 {/* <div className='flex justify-center items-center h-screen'>
 <button

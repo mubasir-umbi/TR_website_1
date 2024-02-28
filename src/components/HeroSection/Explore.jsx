@@ -1,5 +1,6 @@
 import React from 'react';
 import Fade from "react-reveal/Fade";
+// import { Fade } from "react-awesome-reveal";
 
 function Explore({ backgroundColor, title, description, titleColor, descriptionColor }) {
     return (

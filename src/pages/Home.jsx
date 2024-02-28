@@ -1,11 +1,10 @@
 import React, { Suspense } from 'react';
 import { usersResponse } from '../constants/userResponse'
 import BackToTop from '../components/BackToTop';
-import Loader from '../components/loader';
-import Chatbox from '../components/Chat/ChatBox';
 import ChatApp from '../components/Chat/ChatApp';
-import CarouselControlsOutside from '../components/Carousal';
+// import CarouselControlsOutside from '../components/Carousal';
 import  Fade from "react-reveal/Fade";
+import Loader from '../components/Loader';
 const LazyHeroOne = React.lazy(() => import('../components/HeroSection/SectionOne'));
 const LazyProjectCarousel = React.lazy(() => import('../components/HeroSection/ProjectCarousel'));
 const LazyHomeSection1 = React.lazy(() => import('../components/Home/HomeSection1'));
@@ -22,7 +21,7 @@ const Home = () => {
     <div>
 
       <BackToTop />
-      <ChatApp />
+      {/* <ChatApp /> */}
       <Suspense fallback={<div className='h-screen'> <Loader /></div>}>
         <LazyHeroOne />
         <LazyExplore

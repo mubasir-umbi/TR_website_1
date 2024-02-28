@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 // import { Fade } from "react-awesome-reveal";
-import  Fade from "react-reveal/Fade";
+import Fade from "react-reveal/Fade";
 import LetsChatSection from "../../components/LetsChatSection";
 import SectionOne from "../../components/projectDetails/SectionOne";
 import SectionTwo from "../../components/projectDetails/SectionTwo";
@@ -45,28 +45,28 @@ personalized promotions.`
 
 const datas = [
   {
-      name1: 'La Empresa Softwares Pvt Ltd,',
-      name2: '',
-      text: 'CLIENT',
-      pClass: 'leading-[140.00%] max-w-[180px] md:max-w-full text-2xl md:text-[22px] text-gray-900 sm:text-xl font-bold font-montserrat'
+    name1: 'La Empresa Softwares Pvt Ltd,',
+    name2: '',
+    text: 'CLIENT',
+    pClass: 'leading-[140.00%] max-w-[180px] md:max-w-full text-2xl md:text-[22px] text-gray-900 sm:text-xl font-bold font-montserrat'
   },
   {
-      name1: 'Kerala, India',
-      name2: '',
-      text: 'LOCATION',
-      pClass: 'text-2xl md:text-[22px] text-gray-900 sm:text-xl w-auto font-bold font-montserrat'
+    name1: 'Kerala, India',
+    name2: '',
+    text: 'LOCATION',
+    pClass: 'text-2xl md:text-[22px] text-gray-900 sm:text-xl w-auto font-bold font-montserrat'
   },
   {
-      name1: 'UI, UX, Brand Identity',
-      name2: '',
-      text: 'Deliverables',
-      pClass: 'leading-[140.00%] max-w-[180px] md:max-w-full text-2xl md:text-[22px] text-gray-900 sm:text-xl font-bold font-montserrat'
+    name1: 'UI, UX, Brand Identity',
+    name2: '',
+    text: 'Deliverables',
+    pClass: 'leading-[140.00%] max-w-[180px] md:max-w-full text-2xl md:text-[22px] text-gray-900 sm:text-xl font-bold font-montserrat'
   },
   {
-      name1: 'Mobile App',
-      name2: '',
-      text: 'PLATFORMS',
-      pClass: 'text-2xl md:text-[22px] text-gray-900 sm:text-xl w-auto font-bold font-montserrat'
+    name1: 'Mobile App',
+    name2: '',
+    text: 'PLATFORMS',
+    pClass: 'text-2xl md:text-[22px] text-gray-900 sm:text-xl w-auto font-bold font-montserrat'
   },
 ]
 
@@ -77,62 +77,62 @@ const BizBuz = () => {
         <div className="flex flex-col md:gap-10 gap-16 items-center justify-start w-full">
           <div className="flex flex-col items-start justify-start  mx-1 md:px-5 w-full"> */}
       <div className='max-w-[1300px] mx-auto'>
-      <div className="bg-white-A700 flex flex-col font-montserrat items-center justify-end mx-auto pt-12">
-        <div className="flex flex-col md:gap-10 gap-16 items-center justify-start w-full">
-          <div className="flex flex-col w-full">
-          <BackToTop/>
-          <Fade top distance='5%' duration={1000}>
+        <div className="bg-white-A700 flex flex-col font-montserrat items-center justify-end mx-auto pt-12">
+          <div className="flex flex-col md:gap-10 gap-16 items-center justify-start w-full">
+            <div className="flex flex-col w-full">
+              <BackToTop />
+              <Fade top distance='5%' duration={1000}>
 
-            <SectionOne 
-                 name = {buz_buz_img_0} 
-                 text = {text1} 
-                 image = {buz_buz_img_1}
-                 h='h-16' 
-            />
+                <SectionOne
+                  name={buz_buz_img_0}
+                  text={text1}
+                  image={buz_buz_img_1}
+                  h='h-16'
+                />
 
-            <SectionTwo 
-                 datas= {datas} 
-            />
+                <SectionTwo
+                  datas={datas}
+                />
 
-            <ProjectDetailsSection
-                 head1 = 'Understanding'
-                 head2 = 'The Problem' 
-                 img = {buz_buz_img_2}
-                 align = 'items-start'
-                 color = {'text-indigo-A200'}
-                 text = {detText1}
-            />
+                <ProjectDetailsSection
+                  head1='Understanding'
+                  head2='The Problem'
+                  img={buz_buz_img_2}
+                  align='items-start'
+                  color={'text-indigo-A200'}
+                  text={detText1}
+                />
 
-            <ProjectDetailsSection
-                 head1 = 'A new solution'
-                 head2 = 'That people love' 
-                 img = {buz_buz_img_3}
-                 align = 'items-end'
-                 color = {'text-indigo-A200'}
-                 text = {detText2}
-            />
+                <ProjectDetailsSection
+                  head1='A new solution'
+                  head2='That people love'
+                  img={buz_buz_img_3}
+                  align='items-end'
+                  color={'text-indigo-A200'}
+                  text={detText2}
+                />
 
-            <ProjectDetailsSection
-                 head1 = 'Rewards'
-                 head2 = 'Screens' 
-                 img = {buz_buz_img_4}
-                 align = 'items-start'
-                 color = {'text-indigo-A200'}
-                 text = {''}
-                 />
+                <ProjectDetailsSection
+                  head1='Rewards'
+                  head2='Screens'
+                  img={buz_buz_img_4}
+                  align='items-start'
+                  color={'text-indigo-A200'}
+                  text={''}
+                />
 
-            <KeyFeturesSection 
-                 img = {buz_buz_img_5}
-                 color = {'text-indigo-A200'}
-                 text = {key_fet}
-                 />     
-                 </Fade>
+                <KeyFeturesSection
+                  img={buz_buz_img_5}
+                  color={'text-indigo-A200'}
+                  text={key_fet}
+                />
+              </Fade>
+            </div>
           </div>
         </div>
       </div>
-      </div>
-      <HaveProjForUs/>
-      
+      <HaveProjForUs />
+
     </>
   )
 }

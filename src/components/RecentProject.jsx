@@ -16,7 +16,6 @@ import wonderla_img from "../assets/images/wonderla_img.png";
 import logo_1_akessia from "../assets/images/logo_1_akessia.png";
 import akesia_img from "../assets/images/akesia_img.png";
 
-
 import RecentPrjCard from "./RecentPrjCard";
 
 const RecentProject = () => {

@@ -1,6 +1,6 @@
 import React from "react";
 // import { Fade } from "react-awesome-reveal";
-import  Fade from "react-reveal/Fade";
+import Fade from "react-reveal/Fade";
 import SectionOne from "../../components/projectDetails/SectionOne";
 import SectionTwo from "../../components/projectDetails/SectionTwo";
 import ProjectDetailsSection from "../../components/projectDetails/ProjectDetailsSection";
@@ -41,28 +41,28 @@ const color = 'text-deep_orange-600'
 
 const datas = [
   {
-      name1: 'Earth Suppliers',
-      name2: '',
-      text: 'CLIENT',
-      pClass: 'leading-[140.00%] max-w-[180px] md:max-w-full text-2xl md:text-[22px] text-gray-900 sm:text-xl font-bold font-montserrat'
+    name1: 'Earth Suppliers',
+    name2: '',
+    text: 'CLIENT',
+    pClass: 'leading-[140.00%] max-w-[180px] md:max-w-full text-2xl md:text-[22px] text-gray-900 sm:text-xl font-bold font-montserrat'
   },
   {
-      name1: 'Bangalore, India',
-      name2: '',
-      text: 'LOCATION',
-      pClass: 'leading-[140.00%] max-w-[180px] md:max-w-full text-2xl md:text-[22px] text-gray-900 sm:text-xl font-bold font-montserrat'
+    name1: 'Bangalore, India',
+    name2: '',
+    text: 'LOCATION',
+    pClass: 'leading-[140.00%] max-w-[180px] md:max-w-full text-2xl md:text-[22px] text-gray-900 sm:text-xl font-bold font-montserrat'
   },
   {
-      name1: 'UI, UX, Website',
-      name2: '',
-      text: 'Deliverables',
-      pClass: 'leading-[140.00%] max-w-[180px] md:max-w-full text-2xl md:text-[22px] text-gray-900 sm:text-xl font-bold font-montserrat'
+    name1: 'UI, UX, Website',
+    name2: '',
+    text: 'Deliverables',
+    pClass: 'leading-[140.00%] max-w-[180px] md:max-w-full text-2xl md:text-[22px] text-gray-900 sm:text-xl font-bold font-montserrat'
   },
   {
-      name1: 'Web',
-      name2: '',
-      text: 'PLATFORMS',
-      pClass: 'text-2xl md:text-[22px] text-gray-900 sm:text-xl w-auto font-bold font-montserrat'
+    name1: 'Web',
+    name2: '',
+    text: 'PLATFORMS',
+    pClass: 'text-2xl md:text-[22px] text-gray-900 sm:text-xl w-auto font-bold font-montserrat'
   },
 ]
 
@@ -73,62 +73,62 @@ const Offroll = () => {
       {/* <div className="bg-white-A700 flex flex-col font-montserrat items-center justify-end mx-auto pt-12 w-full">
         <div className="flex flex-col md:gap-10 gap-16 items-center justify-start w-full">
           <div className="flex flex-col items-start justify-start mx-1 md:px-5 w-full"> */}
-           <div className='max-w-[1300px] mx-auto'>
-      <div className="bg-white-A700 flex flex-col font-montserrat items-center justify-end mx-auto pt-12">
-        <div className="flex flex-col md:gap-10 gap-16 items-center justify-start w-full">
-          <div className="flex flex-col w-full">
-          <BackToTop/>
-          <Fade top distance='5%' duration={1000}>
+      <div className='max-w-[1300px] mx-auto'>
+        <div className="bg-white-A700 flex flex-col font-montserrat items-center justify-end mx-auto pt-12">
+          <div className="flex flex-col md:gap-10 gap-16 items-center justify-start w-full">
+            <div className="flex flex-col w-full">
+              <BackToTop />
+              <Fade top distance='5%' duration={1000}>
 
-            <SectionOne 
-                 name = {offrollsHeading} 
-                 text = {text} 
-                 image = {offroll_img_1} 
-                 />
+                <SectionOne
+                  name={offrollsHeading}
+                  text={text}
+                  image={offroll_img_1}
+                />
 
-            <SectionTwo 
-                 datas= {datas} 
-            />
+                <SectionTwo
+                  datas={datas}
+                />
 
-            <ProjectDetailsSection
-                 head1 = 'Understanding'
-                 head2 = 'The Problem' 
-                 img = {offroll_img_2}
-                 align = 'items-start'
-                 color = {'text-deep_orange-600'}
-                 text = {detText}
-            />
+                <ProjectDetailsSection
+                  head1='Understanding'
+                  head2='The Problem'
+                  img={offroll_img_2}
+                  align='items-start'
+                  color={'text-deep_orange-600'}
+                  text={detText}
+                />
 
-            <ProjectDetailsSection
-                 head1 = 'A new identity'
-                 head2 = 'That people love' 
-                 img = {offroll_img_3}
-                 align = 'items-end'
-                 color = {color}
-                 text = {detText2}
-            />
+                <ProjectDetailsSection
+                  head1='A new identity'
+                  head2='That people love'
+                  img={offroll_img_3}
+                  align='items-end'
+                  color={color}
+                  text={detText2}
+                />
 
-            <ProjectDetailsSection
-                 head1 = ' Job'
-                 head2 = 'dashboard' 
-                 img = {offroll_img_4}
-                 align = 'items-start'
-                 color = {color}
-                 text = {''}
-                 />
+                <ProjectDetailsSection
+                  head1=' Job'
+                  head2='dashboard'
+                  img={offroll_img_4}
+                  align='items-start'
+                  color={color}
+                  text={''}
+                />
 
-            <KeyFeturesSection 
-                 img = {offroll_key_f_img}
-                 color = {color}
-                 text = {key_fet}
-                 />
-            
-                 </Fade>
+                <KeyFeturesSection
+                  img={offroll_key_f_img}
+                  color={color}
+                  text={key_fet}
+                />
+
+              </Fade>
+            </div>
           </div>
         </div>
       </div>
-      </div>
-      <HaveProjForUs/>
+      <HaveProjForUs />
 
     </>
   );

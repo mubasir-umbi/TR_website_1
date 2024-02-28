@@ -1,12 +1,11 @@
 import React, { Suspense } from "react";
-import { Fade } from "react-awesome-reveal";
 import RecentProject from "../components/RecentProject";
 import CardList from "../components/RecentProject/CardList;";
 import ProjectCarousel from "../components/HeroSection/ProjectCarousel";
 import Explore from "../components/HeroSection/Explore";
 import ReadyToCollabrate from "../components/AboutUs/ReadyToCollabrate";
 import BackToTop from "../components/BackToTop";
-import Loader from "../components/loader";
+import Loader from "../components/Loader";
 
 
 const Projects = () => {

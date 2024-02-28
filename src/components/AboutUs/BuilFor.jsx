@@ -1,6 +1,7 @@
 import React from 'react';
 import LetsTalk from '../buttons/LetsTalk';
 import  Fade from "react-reveal/Fade";
+// import { Fade } from "react-awesome-reveal";
 
 
 function BuiltFor() {

@@ -1,6 +1,6 @@
 import React from 'react'
 // import { Fade } from "react-awesome-reveal";
-import  Fade from "react-reveal/Fade";
+import Fade from "react-reveal/Fade";
 import LetsChatSection from "../../components/LetsChatSection";
 import SectionOne from "../../components/projectDetails/SectionOne";
 import SectionTwo from "../../components/projectDetails/SectionTwo";
@@ -71,39 +71,39 @@ const SnapTrack = () => {
               <BackToTop />
               <Fade top distance='5%' duration={1000}>
 
-              <SectionOne
-                h='h-16'
-                name={SnaptrackHeading}
-                text={txt}
-                image={handMockup}
+                <SectionOne
+                  h='h-16'
+                  name={SnaptrackHeading}
+                  text={txt}
+                  image={handMockup}
                 />
 
-              <SectionTwo
-                datas={datas}
-              />
+                <SectionTwo
+                  datas={datas}
+                />
 
-              <ProjectDetailsSection
-                head1='Understanding'
-                head2='The Problem'
-                img={snaptrac_img_1}
-                align='items-start'
-                color={color}
-                text={ProjDetText0}
-              />
-              <ProjectDetailsSection
-                head1='A new experience'
-                head2='That people love'
-                img={img_group2301911}
-                align='items-end'
-                color={color}
-                text={ProjDetText}
-              />
+                <ProjectDetailsSection
+                  head1='Understanding'
+                  head2='The Problem'
+                  img={snaptrac_img_1}
+                  align='items-start'
+                  color={color}
+                  text={ProjDetText0}
+                />
+                <ProjectDetailsSection
+                  head1='A new experience'
+                  head2='That people love'
+                  img={img_group2301911}
+                  align='items-end'
+                  color={color}
+                  text={ProjDetText}
+                />
 
-              <KeyFeturesSection
-                img={Group_230192}
-                color={color}
-              />
-                </Fade>
+                <KeyFeturesSection
+                  img={Group_230192}
+                  color={color}
+                />
+              </Fade>
             </div>
           </div>
         </div>

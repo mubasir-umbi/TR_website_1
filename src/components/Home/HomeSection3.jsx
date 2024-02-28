@@ -1,5 +1,4 @@
 import React from 'react'
-
 import logo_1_ofroll from '../../assets/images/logo_1_ofroll.webp'
 import logo_1_siloplus from '../../assets/images/logo_1_siloplus.webp'
 import logo_1_wonderla from '../../assets/images/logo_1_wonderla.webp'

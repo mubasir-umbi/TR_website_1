@@ -2,6 +2,7 @@ import React from 'react'
 import LetsTalk from '../buttons/LetsTalk'
 import MoreProjects from '../buttons/MoreProjects'
 import  Fade from "react-reveal/Fade";
+// import { Fade } from "react-awesome-reveal";
 
 
 function HomeSection1() {

@@ -5,8 +5,6 @@ import PageNotFound from "./components/PageNotFound";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
-import Chatbox from "./components/Chat/ChatBox";
-
 
 const ContactPage = React.lazy(() => import("./pages/ContactPage"));
 const ProjectsPage = React.lazy(() => import("./pages/Projects"));
@@ -31,6 +29,7 @@ const SiteRoutes = () => {
           <Route path="/#services" element={<Home />} />
           <Route path="*" element={<><Header /><PageNotFound /> <Footer /></>} />
           <Route path="/contact_us" element={<><Header /><ContactPage /></>} />
+          {/* <Route path="/schedule" element={<><ScheduleCall /></>} /> */}
         </Routes> 
       </Router>
     </React.Suspense>
